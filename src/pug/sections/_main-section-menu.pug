@@ -1,0 +1,27 @@
+section.main-menu#main-menu
+	.container
+		.menu-products__content
+			.product-slider-options
+				h2.block-title Новые предложения:
+				.filter-select.form-select
+					.form-select__icon
+						i.fas.fa-angle-down
+					input(type="text" name="city" placeholder="Все" autocomplete="off")
+					ul.form-select__options
+						li.active Классические
+						li Дизайнерские
+						li В коробке
+						li В корзине
+			.product-slider.owl-carousel
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod1', 270,  4890)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod2', 270,  4500)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod3', 270,  5000)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod4', 270,  4250)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod1', 270,  4890)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod2', 270,  4500)

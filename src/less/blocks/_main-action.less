@@ -1,0 +1,123 @@
+.stocks {
+	padding-top: 130px;
+	padding-bottom: 160px;
+	background-color: #fff;
+	background-size: cover;
+	background-position: center;
+
+
+	@media(max-width:1500px) {
+		padding-top: 85px;
+		padding-bottom: 100px;
+	}
+
+	@media(max-width:767px) {
+		padding-top: 45px;
+		padding-bottom: 50px;
+		background-position: 33% 50%;
+
+	}
+
+
+}
+
+.stocks-content {
+	max-width: 290px;
+	position: relative;
+
+	.sale-slogan {
+
+		font-size: 85px;
+		position: absolute;
+		top: -11%;
+		transform: translateX(96%);
+		padding: 15px 12px;
+
+		p {
+			padding: 3px 40px;
+			line-height: .9;
+			background-color: @yellow;
+			position: relative;
+			z-index: 2;
+
+			@media(max-width:767px) {
+				padding: 3px 20px;
+
+			}
+		}
+
+		.sale-slogan__border {
+			position: absolute;
+			top: 8px;
+			left: -10px;
+			z-index: 1;
+
+			@media(max-width:1199px) {
+				top: 0px;
+			}
+
+			@media(max-width:767px) {
+				top: 3px
+			}
+		}
+
+		@media(max-width:1199px) {
+			transform: translateX(96%);
+			font-size: 70px;
+			padding: 5px;
+
+		}
+
+
+		@media(max-width:767px) {
+
+			font-size: 44px;
+			padding: 5px;
+
+		}
+
+		@media(max-width:374px) {
+			transform: translateX(0%);
+			right: 0;
+		}
+	}
+
+	h2 {
+		margin-bottom: 20px;
+
+		text-transform: uppercase;
+	}
+
+	.page-button {
+		margin-top: 30px;
+
+		@media(max-width:767px) {
+			margin-top: 15px;
+		}
+	}
+}
+
+.stock-product {
+	h4 {
+		font-size: 30px;
+
+
+	}
+
+	.stock-product-desk {
+		font-size: 15px;
+		line-height: 1.3;
+	}
+
+	.stock-product-price {
+
+		font-size: 32px;
+
+
+		span {
+			font-size: 22px;
+
+			font-weight: 700;
+		}
+	}
+}

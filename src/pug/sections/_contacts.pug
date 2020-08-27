@@ -1,0 +1,51 @@
+
+section.contacts.pt-30
+	.container
+		.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная
+			.brcrumg-item
+				a(href="#!") Контакты
+		.contacts-content
+			.row
+				.col-md-6.col-lg-7
+					.feedback-form
+						h2.title-2 Обратная связь						
+						form(action="").contact-form
+							.form-block.d-flex
+								.form-group
+									input(type="text" name="userName" )
+									span.fake-placeholder Имя
+									span.error-notify
+									span.error-text Введите имя
+								.form-group 
+									input(type="text" name="userEmail"  )
+									span.fake-placeholder Email #[span *]
+									span.error-notify
+									span.error-text Введите Email
+							.form-group
+								textarea(type="text" name="message"  )
+								span.fake-placeholder Введите сообщение
+							.form-group.agree-text
+								label(class="form-label")
+									input(class="form-checkbox" type="checkbox" name="agreePolitic")
+									span.custom-checkbox
+									| Принимаю  #[a(href="#") условия обработки] моих данных.
+							.form-group
+								input.page-btn2(type="submit" value="Отправить")
+						#answer
+				.col-md-5.col-lg-4.offset-md-1
+					.address-block
+						h2.title-2 Контакты
+						.address-block__item
+							span Адрес:
+							span г.Москва, ул.Северянинский проезд д. 9 стр. 1
+						.address-block__item
+							span Время работы:								
+							span СР,ЧТ, ВС  с 15:00 - 00:00;   ПТ, СБ с 15:00 - 02:00;   ПН, ВТ - выходные дни
+						.address-block__item
+							span Телефон:
+							a(href="tel:+79055555555") + 7 (905) 555-55-55
+						.address-block__item
+							span Email:
+							a(href="mailto:info@mail.ru") info@mail.ru

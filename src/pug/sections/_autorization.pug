@@ -1,0 +1,75 @@
+
+section.autorization-page.pt-30
+	.container
+		.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная
+			.brcrumg-item
+				a(href="#!") Авторизация
+		h1.page-title Вход в личный кабинет:
+		.forms-wrapper
+			.row
+				.col-md-6
+					.forms-wrapper__col
+						h3.title-light  Авторизация
+						form.login-form
+							.form-group
+								input(type="text" name="userLogin" )
+								span.fake-placeholder Логин #[span *]
+								span.error-notify
+								p Укажите логин, email или номер телефона, которые вы использовали при регистрации.
+								//- span.error-text Введите имя
+							.form-group 
+								input(type="password" name="userPass"  )
+								span.fake-placeholder Пароль #[span *]
+								span.error-notify
+								p  Если вы не помните свой пароль - просто оставьте это поле пустым и вы получите новый, вместе со ссылкой на активацию.
+								//- span.error-text Введите номер телефона
+							
+							.form-group.agree-text
+								label(class="form-label")
+										input(class="form-checkbox" type="checkbox" name="agreePolitic")
+										span.custom-checkbox
+										| Принимаю  #[a(href="#") условия обработки] моих данных.
+							.form-group.form-group--btn
+								input.page-button.page-button--color(type="submit" value="Вход")
+				.col-md-6
+					.forms-wrapper__col.forms_col--reg
+						h3.title-light  Регистрация
+						form.registration-form
+							.form-group
+								input(type="text" name="userEmail" )
+								span.fake-placeholder Email #[span *]
+								span.error-notify
+								p На указанный email придёт письмо со ссылкой для активации.
+							.form-group
+								input(type="text" name="userPhone" class="phone" )
+								span.fake-placeholder Телефон #[span *]
+								span.error-notify
+								p Просто номер вашего сотового телефона.
+								//- span.error-text Введите имя
+							.form-group 
+								input(type="password" name="userPass"  )
+								span.fake-placeholder Пароль #[span *]
+								span.error-notify
+								p Если оставить это поле пустым , то пароль будет сгенерирован автоматически.
+								//- span.error-text Введите номер телефона
+							.form-group
+								input(type="text" name="userLogin" )
+								span.fake-placeholder Логин #[span *]
+								span.error-notify
+								p Укажите логин, email или номер телефона, которые вы использовали при регистрации.
+								//- span.error-text Введите имя
+							.form-group 
+								input(type="text" name="userName"  )
+								span.fake-placeholder Имя #[span *]
+								span.error-notify
+								p  Ваше имя, для отображения на сайте.
+							.form-group.agree-text
+								label(class="form-label")
+										input(class="form-checkbox" type="checkbox" name="agreePolitic")
+										span.custom-checkbox
+										| Принимаю  #[a(href="#") условия обработки] моих данных.
+							.form-group.form-group--btn
+								input.page-button.page-button--red(type="submit" value="Регистрация")
+							

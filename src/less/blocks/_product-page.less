@@ -1,0 +1,172 @@
+.product-page__content {
+	background: #FFFFFF;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.18);
+	border-radius: 20px;
+}
+
+.product-image {
+	padding: 6px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media(max-width:1199px) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 400px;
+	}
+}
+
+.product-set {
+
+	padding: 15px 20px 30px;
+	border-left: 1px solid #eeeeee;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	@media(max-width:374px) {
+		padding: 20px 10px 30px;
+	}
+}
+
+.product-set__row {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	&:first-child {
+		border-bottom: 1px solid #EEEEEE;
+	}
+
+	.ingredients {
+		width: 70%;
+	}
+
+	.filter-name {
+		margin-right: 15px;
+
+		@media(max-width:1199px) {
+			margin-right: 5px;
+		}
+
+		@media(max-width:991px) {
+			margin-right: 10px;
+		}
+	}
+
+	.filters-type__item {
+		margin-right: 5px;
+
+
+	}
+
+	.products-group__List li {
+		margin-bottom: 15px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+
+}
+
+.product-set__types,
+.product-set__row-wrap {
+	flex-direction: row;
+
+	@media(max-width:767px) {
+		flex-direction: column;
+	}
+}
+
+.product-set__column {
+	flex-direction: column;
+}
+
+.product-set__types {
+	.products-group__List {
+		margin-right: 40px;
+	}
+}
+
+.product-set__footer {
+	padding-top: 30px;
+	border-top: 1px solid #EEEEEE;
+	margin-top: auto;
+}
+
+.product-set__footer {
+	.d-flex {
+		align-items: center;
+
+		@media(max-width:767px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	.product-counter {
+		width: 101px;
+		height: 30px;
+		justify-content: space-between;
+	}
+
+	.product-counter--num {
+		margin-right: 0;
+		width: 30px;
+	}
+
+	.total-amount {
+		display: flex;
+		justify-content: space-between;
+
+
+		@media(max-width:767px) {
+			flex-direction: column;
+		}
+
+	}
+
+	.basket-item__cost {
+		margin-left: 20px;
+	}
+
+	.page-button {
+		width: 170px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.product-page .total-amount {
+	span.title-16--bold {
+		@media(max-width:424px) {
+			display: none;
+		}
+	}
+}
+
+// FOTORAMA
+.fotorama.fotorama--product .fotorama__thumb-border {
+	border: 2px solid @green;
+	border-radius: 5px;
+
+}
+
+.products-optional__List {
+	.form-group {
+		margin-bottom: 8px;
+
+		span {
+			position: relative;
+			top: -2px
+		}
+	}
+}
+
+.other-products {
+	.title-4 {
+		text-transform: uppercase;
+	}
+}

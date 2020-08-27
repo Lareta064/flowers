@@ -1,0 +1,146 @@
+section.user-profile.pt-30
+	.container
+		.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная
+			.brcrumg-item
+				a(href="stocks.html") Личный кабинет
+		h1.page-title Личный кабинет
+		// ============  ТАБЫ ============
+		.user-profile__tabs
+			nav
+				#nav-tab.nav.nav-tabs(role="tablist")
+					a#nav-home-tab.nav-item.nav-link.active(data-toggle="tab" href="#user-data" role="tab" aria-controls="user-data" aria-selected="true") Личные данные
+					a#user-history-tab.nav-item.nav-link(data-toggle="tab" href="#user-history" role="tab" aria-controls="nav-profile" aria-selected="false") История заказов
+					
+				#nav-tabContent.tab-content
+					//  ============ ЛИЧНЫЕ ДАННЫЕ ============
+					#user-data.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="user-data-tab")
+						.content-inner.content-inner--pt
+							form.personal-data
+								.add-avatar
+									.add-avatar__col
+										input(type="file" id="file" data-multiple-caption="{count} файлов выбрано" multiple class="inputfile")
+										label.form-label(for="file")
+											span Выбрать файл
+									.add-avatar__col
+										.user-avatar
+											a(href="#" style="background-image: url(img/main/icons/avatar.jpg), url(img/main/icons/noavatar.jpg)")
+								.form-body
+									.form-col
+										.form-group
+											label Имя:
+											input(type="text" name="userName" value="Иванов Иван")
+										.form-group
+											label Телефон:
+											input(type="text" name="userName" class="phone" value="+7 999 999 50 50")
+										.form-group
+											label Улица:
+											input(type="text" name="addressStreet" value="Ленина" )
+									.form-col
+										.form-group
+											label Дом:
+											input(type="text" name="addressHouse"  value="25")
+										.form-group
+											label Квартира:
+											input(type="text" name="addressNumber" class="text" value="26")
+										.form-group
+											label Пароль:										
+											#toggle-passw
+												svg(width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+													path( d="M10 4.03906C6.17879 4.03906 2.71351 6.12968 0.15649 9.52541C-0.0521632 9.80361 -0.0521632 10.1923 0.15649 10.4705C2.71351 13.8703 6.17879 15.9609 10 15.9609C13.8212 15.9609 17.2865 13.8703 19.8435 10.4746C20.0522 10.1964 20.0522 9.8077 19.8435 9.5295C17.2865 6.12968 13.8212 4.03906 10 4.03906ZM10.2741 14.1976C7.73755 14.3572 5.64284 12.2665 5.80239 9.72588C5.93331 7.63117 7.63118 5.9333 9.72589 5.80238C12.2625 5.64283 14.3572 7.73345 14.1976 10.2741C14.0626 12.3647 12.3647 14.0626 10.2741 14.1976ZM10.1473 12.2584C8.78081 12.3443 7.65163 11.2192 7.74164 9.85271C7.81119 8.72353 8.72763 7.81118 9.85681 7.73754C11.2233 7.65162 12.3525 8.77671 12.2625 10.1432C12.1888 11.2765 11.2724 12.1888 10.1473 12.2584Z" fill="#1F1F1F")
+											input(type="password" name="userPass"  value="12345678")
+								.form-footer
+									.subscribes-block
+										.subscribes-block__top
+											p Согласен на отправку:
+											.subscribes-block__inputs
+												label.form-label sms
+													input.form-checkbox(type="checkbox" name='smsCheck' checked)
+													span.custom-checkbox
+												label.form-label email
+													input.form-checkbox(type="checkbox" name='smsCheck')
+													span.custom-checkbox
+										p Мы не рассылаем спам. Вы будете получать только актуальную информацию о наших акциях.
+									.flex-wrapper
+										button.page-button.page-btn4 Изменить данные
+							.text-16.politic-agree
+								p Работа с персональными данными на этом сайте ведется в соответствии с #[a(href="#") политикой конфиденциальности].
+					
+					// ============ ИСТОРИЯ ЗАКАЗОВ ============
+					#user-history.tab-pane.fade(role="tabpanel" aria-labelledby="user-history-tab")
+						#accordion.content-inner(role="tablist" aria-multiselectable="true")
+							.panel.panel-default
+								a#heading1.panel-heading(role="tab" data-toggle="collapse" href="#collapse1" aria-expanded="true")
+									.accordion-item__title
+										.text-phrase
+											span Заказ №:
+											span 14151617
+										.text-phrase
+											span Дата заказа:
+											span 25.02.2020
+										.accordion-item__icon
+											span Свернуть
+											+openDrop(class='up')
+								#collapse1.panel-collapse.collapse.in.show(role="tabpanel" aria-labelledby="heading1" data-parent="#accordion")
+									.basket-table
+										+basketItem('product1', 'Шелковица', 'Армения')
+									.basket-result
+										.row
+											.col-md-6.col-lg-5.offset-lg-1.col-xl-4.offset-xl-3.order-md-2
+												.total-amount
+													span.title-3 Итого:
+													span 14&nbsp;шт на сумму 
+													.basket-item__cost
+														.basket-item__cost-val.title-34 1650
+														.basket-item__cost-dim руб
+											.col-md-6.col-xl-5.order-md-1
+												.basket-btn
+													button.page-button.page-button--red Повторить
+													button.basket-clean.page-btn2
+														span Удалить из истории
+														span
+															svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+																path(fill-rule="evenodd" clip-rule="evenodd" d="M10 1H6V2H10V1ZM2 4V3H14V4H13V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V4H2ZM6 6H7V12H6V6ZM9 6H10V12H9V6ZM4 14V4H12V14H4Z" fill="#1F1F1F")
+																mask(id="mask-del" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="1" width="12" height="14")
+																	path(fill-rule="evenodd" clip-rule="evenodd" d="M10 1H6V2H10V1ZM2 4V3H14V4H13V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V4H2ZM6 6H7V12H6V6ZM9 6H10V12H9V6ZM4 14V4H12V14H4Z" fill="white")
+										
+							
+							.panel.panel-default
+								a.collapsed#heading2.panel-heading(role="tab" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2")
+									.accordion-item__title
+										.text-phrase
+											span Заказ №:
+											span 14151617
+										.text-phrase
+											span Дата заказа:
+											span 25.02.2020
+										.accordion-item__icon
+											span Развернуть
+											+openDrop
+								#collapse2.panel-collapse.collapse(role="tabpanel" aria-labelledby="heading2" data-parent="#accordion")
+									.basket-table
+										+basketItem('product3','Бананы', 'отборные','500')
+									.basket-result
+										.row
+											.col-md-6.col-lg-5.offset-lg-1.col-xl-4.offset-xl-3.order-md-2
+												.total-amount
+													span.title-3 Итого:
+													span 14&nbsp;шт на сумму 
+													.basket-item__cost
+														.basket-item__cost-val.title-34 1650
+														.basket-item__cost-dim руб
+											.col-md-6.col-xl-5.order-md-1
+												.basket-btn
+													button.page-button.page-button--red Повторить
+													button.basket-clean.page-btn2
+														span Удалить из истории
+														span
+															svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+																path(fill-rule="evenodd" clip-rule="evenodd" d="M10 1H6V2H10V1ZM2 4V3H14V4H13V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V4H2ZM6 6H7V12H6V6ZM9 6H10V12H9V6ZM4 14V4H12V14H4Z" fill="#1F1F1F")
+																mask(id="mask-del" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="1" width="12" height="14")
+																	path(fill-rule="evenodd" clip-rule="evenodd" d="M10 1H6V2H10V1ZM2 4V3H14V4H13V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V4H2ZM6 6H7V12H6V6ZM9 6H10V12H9V6ZM4 14V4H12V14H4Z" fill="white")
+						
+							//============ БЛОК С КНОПКОЙ ============
+							.panel.panel-default.panel-footer
+								button.page-button.page-button--red Очистить историю

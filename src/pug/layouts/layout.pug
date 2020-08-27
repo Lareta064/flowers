@@ -1,0 +1,41 @@
+include mixins.pug
+block variables
+
+
+doctype html
+html(lang='ru')
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		title #{title}
+		meta(name="keywords" content="" )
+		meta(name="description" content="" )
+		link( rel="stylesheet" href="libs/bootstrap/bootstrap.min.css")
+		link(rel="stylesheet", href="libs/owlCarousel/owl.carousel.min.css")
+		link( rel="stylesheet" href="libs/animate.css")
+		link( rel="stylesheet" href="libs/uiSlider.css")
+		link( href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap" )
+		link( href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" )
+		link(rel="shortcut icon" href="img/favicon.png"  type="image/x-icon" )
+		link(rel="stylesheet", href="fonts/rawline/style.css")
+		link(rel="stylesheet", href="css/main.css")
+		
+	body
+
+
+		block content
+		#overlay
+		script(src="libs/jquery/jquery-3.0.0.min.js")
+		script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+		script(src="libs/bootstrap/bootstrap.min.js")
+		script(src="libs/SmoothScroll.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js")
+		script(src="libs/owlCarousel/owl.carousel.min.js")
+		script(src="libs/mixitup3/mixitup.min.js")
+		script(src="libs/lazy/jquery.lazy.min.js")
+		script(src="libs/lazy/jquery.lazy.plugins.min.js")
+		script(src="libs/jquery.maskedinput.min.js")
+		script(src="https://kit.fontawesome.com/82e9f58f04.js")
+		script(src='js/main.js')
+		

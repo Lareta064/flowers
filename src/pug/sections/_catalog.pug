@@ -1,0 +1,75 @@
+
+section.catalog
+	.container
+		.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная
+			.brcrumg-item
+				a(href="catalog.html") Каталог
+			.brcrumg-item
+				a(href="categories.html") Категории
+		
+		h1.page-title Мясо, рыба, птица
+		.catalog-block
+			.row
+				.col-lg-9.order-lg-2
+					.catalog-content
+						.content-filters
+							.filter-display
+								button.view-table.active
+									+table
+								button.view-list
+									i.fas.fa-list-ul
+							.filter-select.form-select
+								.form-select__icon
+									i.fas.fa-angle-down
+								input(type="text" name="city" placeholder="Выводить сначала" autocomplete="off")
+								ul.form-select__options
+									li.active Самые дорогие
+									li Самые дешевые
+									li Популярные
+									li В наличии
+							
+							.filter-select--count
+								p Товаров на странице:
+								.count-buttons
+									button.active 12
+									button 24
+									button 36
+									button Все
+						.content-badges
+							.badge
+								p Мясо
+								+close
+							.badge
+								p Телятина
+								+close
+							.badge
+								p Говядина
+								+close
+							.badge
+								p Акции
+								+close
+						.content-cards
+							.row
+								.col-md-6.col-xl-4
+									+main-product-card('Лопатка говядина', 'product10', 1000, 'Фермерское мясо', 630)
+								.col-md-6.col-xl-4
+									+main-product-card(' Говядина на костях', 'product12', 1000, 'Фермерское мясо', 500, 800)
+								.col-md-6.col-xl-4
+									+main-product-card(' Вырезка из шеи говядины', 'product13',1000, 'Фермерское мясо', 350)
+								.col-md-6.col-xl-4
+									+main-product-card('Мякоть говядины', 'product14', 1000, 'Фермерское мясо', 630)
+								.col-md-6.col-xl-4
+									+main-product-card('Телятина корейка', 'product15', 1000, 'Фермерское мясо', 700)
+								.col-md-6.col-xl-4
+									+main-product-card(' Антрекот (говядина) ', 'product16', 1000, ' Фермерское мясо', 1000)
+								.col-md-6.col-xl-4
+									+main-product-card(' Язык (говядина)', 'product17', 1000, 'Фермерское мясо', 500)
+								.col-md-6.col-xl-4
+									+main-product-card(' Глазной мускул (говядина) ', 'product18', 650, 'Фермерское мясо', 1000)
+								.col-md-6.col-xl-4
+									+main-product-card('Вырезка (говядина)  ', 'product19', 650, 'Фермерское мясо', 1000)
+				.col-lg-3.order-lg-1
+					include _filter-panel.pug
+				

@@ -1,0 +1,82 @@
+.filter-panel
+	.filter-panel__block
+		h4 Категории магазина
+		.filter-panel__menu
+			ul
+				li
+					a(href="#!") Овощи
+				li
+					a(href="#!") Фрукты
+				li
+					a(href="#!") Экзотические фрукты
+				li.drop-list.active
+					a(href="#!") Мясо, рыба, птица
+					.menu-drop
+						a(href="#") Мясо
+						a(href="#") Рыба
+						a(href="#") Птица
+				li.drop-list
+					a(href="#!") Вода, напитки, соки
+					.menu-drop
+						a(href="#") Вода
+						a(href="#") напитки
+						a(href="#") соки
+				
+				li.drop-list
+					a(href="#!") Орехи и сухофрукты
+					.menu-drop
+						a(href="#") Орехи
+						a(href="#") сухофрукты
+						
+				li
+					a(href="#!") Зелень
+				li
+					a(href="#!") Ягоды
+				li
+					a(href="#!") Товары по акции
+
+	.filter-panel__block
+		.filter-type
+			h5 Цена, Р
+			.price-filter__range
+				.price-filter__value
+					label.basic-text(for="amount") oт
+					input.price-value#amount(type="text")
+					label.basic-text(for="amount_1") до
+					input.price-value#amount_1(type="text" )
+				#slider-range
+		.filter-type
+			h5 Вид мяса
+			.filter-checkbox
+				label(class="form-label")
+					input(class="form-checkbox" type="checkbox" )
+					span.custom-checkbox
+					span Свинина
+				label(class="form-label")
+					input(class="form-checkbox" type="checkbox" )
+					span.custom-checkbox
+					span Говядина
+				label(class="form-label")
+					input(class="form-checkbox" type="checkbox" )
+					span.custom-checkbox
+					span Телятина
+				label(class="form-label")
+					input(class="form-checkbox" type="checkbox" )
+					span.custom-checkbox
+					span Кролик
+		.filter-type
+			h5 Акции
+			.filter-checkbox
+				label(class="form-label")
+					input(class="form-checkbox" type="checkbox" )
+					span.custom-checkbox
+					span Товары по акции
+		.filter-type
+			h5 Новинки
+			.filter-checkbox
+				label(class="form-label")
+					input(class="form-checkbox" type="checkbox" )
+					span.custom-checkbox
+					span Новые поступления
+		.filter-button
+			button.page-button.page-button--red Сбросить 

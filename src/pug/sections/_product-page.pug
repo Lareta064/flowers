@@ -1,0 +1,170 @@
+
+section.product-page.pt-30
+	.container
+		.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная
+			.brcrumg-item
+				a(href="") Страница товара
+		h1.page-title Шелковица Армения
+		.product-page__content
+			.row
+				.col-lg-5.col-xl-6
+					.fotorama.fotorama--product(data-nav="thumbs")
+						a(href="img/main/fotorama/1.jpg")
+							img(src="img/main/fotorama/thumb1.jpg" width='160' height="115")
+						a(href="img/main/fotorama/1.jpg")
+							img(src="img/main/fotorama/thumb1.jpg" width='160' height="115")
+						a(href="img/main/fotorama/1.jpg")
+							img(src="img/main/fotorama/thumb1.jpg" width='160' height="115")
+						a(href="img/main/fotorama/1.jpg")
+							img(src="img/main/fotorama/thumb1.jpg" width='160' height="115")
+				.col-lg-7.col-xl-6
+					.product-set
+						.product-set__row
+							.text-16.ingredients
+								p Урожай 2020 года
+							
+							.text-16--light
+								p Вес: 500гр
+
+						.product-set__row.product-set__row-wrap
+							.product-card__filters
+								.text-16
+									p Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат. Шелковица в зависимости от сорта может по цвету варьироваться от красного до темно-фиолетового почти черного и от белого до розового. Шелковичное дерево плодоносит ежегодно и очень обильно. Урожай одного дерева может составлять более 200 кг. Первые плоды начинают зреть в середине июля. Основной период созревания приходит на конец июля начало августа.
+						.product-set__row.product-set__column
+							.text-16--bold.mb-19 Дополнительно:
+							.product-set__types.d-flex
+								.products-optional__List
+									.form-group
+										input(type="radio" id="op1" name='optional' )
+										label(for="op1")
+											span Стандартная упаковка
+									.form-group
+										input(type="radio" id="op2" name='optional' )
+										label(for="op2")
+											span Упаковка с дополнительными хладагентами + 300 руб.
+									.form-group
+										input(type="radio" id="op3" name='optional' )
+										label(for="op3")
+											span Жесткая упаковка в деревянные коробки + 150 руб.
+						.product-set__footer
+							.total-amount
+								div.d-flex
+									span.title-16--bold Количество:
+									+counter 
+									.basket-item__cost
+										.basket-item__cost-val.title-34 350
+										.basket-item__cost-dim руб
+								button.page-button.page-button--red В корзину
+
+// // ============ ОТЗЫВЫ =============
+section.review-block
+	.container
+		h4.title-4 Отзывы(3)
+		.review-block__wrapper
+			.review-item
+				.review-author
+					.author-avatar
+						img(src="img/main/review/rev1.jpg", alt="review")
+					p Дмитрий
+					p 16.04.2020
+				
+				.review-text
+					p Таким образом консультация с широким активом представляет собой интересный эксперимент проверки систем массового участия. Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке направлений прогрессивного развития. Идейные соображения высшего порядка, а также консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям.
+			.review-item
+				.review-author
+					.author-avatar
+						img(src="img/main/review/rev2.jpg", alt="review")
+					p Наталья
+					p 15.04.2020
+				
+				.review-text
+					p Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
+			.review-item
+				.review-author
+					.author-avatar
+						img(src="img/main/review/rev3.jpg", alt="review")
+					p Ирина
+					p 12.04.2020
+				
+				.review-text
+					p Задача организации, в особенности же новая модель организационной деятельности в значительной степени обуславливает создание новых предложений. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Товарищи! начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+		
+		// ============ ПАГИНАЦИЯ =============
+		.pagination-wrapper
+			.pagination-block
+				button
+					span
+						svg(width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M4.95294 7.5L1 4.01759L5 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round") 
+							path(d="M7.95294 7.5L4 4.01759L8 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round") 
+				button
+					span
+						svg(width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M4.95294 7.5L1 4.01759L5 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
+				button.active 1
+				button 2
+				button 3
+				button ...
+				button 6
+				button
+					span
+						svg(width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M1.04706 7.5L5 4.01759L1 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
+				button
+					span
+						svg(width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M4.04706 7.5L8 4.01759L4 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
+							path(d="M1.04706 7.5L5 4.01759L1 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
+
+		//============ ФОРМА ДЛЯ ОТЗЫВА =============
+		.review-form-wrapper
+			form
+				.form-block
+					.row
+						.col-md-3.col-xl-2
+							.choose-avatar
+								.user-avatar(style="background-image:  url(img/main/review/nofoto.jpg)")
+								.choose-avatar__col
+									input(type="file" id="file" data-multiple-caption="{count} файлов выбрано" multiple class="inputfile")
+									label.avatar-label(for="file")
+										span Загрузить фото
+						.col-md-4.offset-md-1.offset-xl-0.col-xl-5
+							.form-group
+								input(type="text" name="userName" )
+								span.fake-placeholder Имя #[span *]
+								span.error-notify
+								span.error-text Имя
+						.col-md-4.col-xl-5
+							.form-group 
+								input(type="text" name="userEmail"  )
+								span.fake-placeholder Email (не публикуется) #[span *]
+								span.error-notify
+								span.error-text Введите email
+						.col-12
+							.form-group
+								textarea(type="text" name="message"  )
+								span.fake-placeholder Text #[span *]
+						.col-12
+							button.page-button.page-button--color Оставить отзыв
+						
+		//============ ПОХОЖИЕ ТОВАРЫ =============				
+section.other-products
+	.container
+		.title-group
+			h4.title-4 Похожие товары
+		.menu-products__content
+			.row
+				.col-md-6.col-xl-4
+					+main-product-card('Шелковица Армения', 'product1', 500, 'Урожай 2020 года', 630)
+				.col-md-6.col-xl-4
+					+main-product-card('Крыжовник Россия', 'product2', 500, 'Урожай 2020 года', 500, 800)
+				.col-md-6.col-xl-4
+					+main-product-card('Арбуз нарезанный Иран', 'product3', 450, 'Урожай 2020 года', 350)
+				.col-md-6.col-xl-4
+					+main-product-card('Баклажаны', 'product4', 500, 'Урожай 2020 года', 630)
+				.col-md-6.col-xl-4
+					+main-product-card('Evian минеральная 24 штук по 0.5 л', 'product5', 650, 'Урожай 2020 года', 700)
+				.col-md-6.col-xl-4
+					+main-product-card(' Говядина на костях', 'product6', 650, ' Фермерское мясо', 700)

@@ -1,0 +1,204 @@
+/*****НАВИГАЦИЯ В ШАПКЕ****/
+.header-menu {
+	display: flex;
+	position: relative;
+
+	@media(max-width:1199px) {
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 82%;
+		max-width: 400px;
+		background-color: @primary;
+		z-index: 10;
+		height: 100vh;
+		flex-direction: column;
+		transform: translateX(-100%);
+		transition: .5s;
+		padding-top: 30px;
+		padding-left: 20px;
+
+		@media(max-width:767px) {
+			padding-top: 20px;
+		}
+	}
+
+	.menu-social {
+		display: none;
+
+		@media(max-width:1199px) {
+			display: block;
+			margin-top: 20px;
+		}
+	}
+
+	.menu-logo {
+		display: none;
+
+		@media(max-width:1199px) {
+			display: block;
+			margin-bottom: 50px;
+		}
+
+		@media(max-width:767px) {
+			width: 100;
+		}
+	}
+}
+
+.header-menu.active {
+	transform: translateX(0%);
+}
+
+.header-menu li {
+	a {
+		color: inherit;
+	}
+
+	display: block;
+	position: relative;
+	margin-right: 24px;
+	color: @black;
+	width: fit-content;
+
+	@media(max-width:1199px) {
+		color: #fff;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		margin-bottom: 20px;
+	}
+
+	@media(max-width:767px) {
+
+		margin-bottom: 5px;
+	}
+
+	&.active {
+		color: @yellow;
+		font-weight: 700;
+
+		&:after,
+		&:before {
+			display: none;
+
+		}
+
+		&:hover {
+			color: @yellow;
+		}
+
+		@media(max-width:1199px) {}
+	}
+
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+
+		bottom: -1px;
+		width: 0;
+		height: 2px;
+		background-color: @black;
+		transition: .3s;
+	}
+
+	&:after {
+		left: 50%;
+	}
+
+	&:before {
+		right: 50%;
+
+	}
+
+	&:hover {
+		color: @black;
+
+		&:after {
+			width: 50%;
+			left: 0;
+
+			@media(max-width:1199px) {
+				width: 0;
+			}
+		}
+
+		&:before {
+			width: 50%;
+			right: 0;
+
+			@media(max-width:1199px) {
+				width: 0;
+			}
+		}
+	}
+}
+
+.menu-toggle {
+	display: none;
+	position: relative;
+
+	@media(max-width:1199px) {
+		display: block;
+		z-index: 20;
+		margin-left: 40px;
+		width: 40px;
+		height: 40px;
+		position: relative;
+	}
+
+	@media(max-width:991px) {
+
+		margin-left: 30px;
+	}
+
+	span {
+		position: relative;
+		display: block;
+		width: 35px;
+		height: 2px;
+		background-color: @black;
+		top: 20px;
+		.tr;
+
+
+	}
+
+	span:after,
+	span:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		height: 2px;
+		background-color: @black;
+		right: 0;
+		.tr;
+	}
+
+	span:after {
+		top: -10px;
+	}
+
+	span:before {
+		bottom: -10px;
+	}
+}
+
+.menu-toggle.active {
+	span {
+		background-color: transparent;
+	}
+
+	span:after {
+		top: 0px;
+		transform: rotate(45deg);
+		background-color: @red;
+	}
+
+	span:before {
+		bottom: 0px;
+		transform: rotate(-45deg);
+		background-color: @red;
+	}
+}

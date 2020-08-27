@@ -1,0 +1,87 @@
+/*ДОСТАВКА  И ОПЛАТА*/
+.delivery {
+	.border-block {
+		margin-bottom: 40px;
+
+		p,
+		h3 {
+			color: @red;
+		}
+	}
+}
+
+.border-block h3,
+.text-block h3 {
+	margin-bottom: 20px;
+}
+
+.text-block {
+	margin-bottom: 15px;
+}
+
+.text-block p {
+	padding-bottom: 10px;
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+.border-block {
+	background: #FFFFFF;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.18);
+	border-radius: 20px;
+	padding: 30px;
+	margin-bottom: 30px;
+
+	@media(max-width: 991px) {
+		padding: 25px;
+	}
+
+	@media(max-width: 767px) {
+		padding: 20px;
+	}
+}
+
+.delivery-info {
+	padding-left: 34px;
+	border-left: 4px solid #E9FBE2;
+
+	height: 100%;
+
+	@media(max-width:1199px) {
+		padding-left: 24px;
+	}
+
+	@media(max-width:991px) {
+		padding-left: 18px;
+		padding-top: 30px;
+	}
+}
+
+.delivery-info .title-3 {
+	margin-bottom: 30px;
+
+	a {
+		display: block;
+		white-space: nowrap;
+		color: @pr;
+
+		&:hover {
+			color: @green;
+		}
+	}
+}
+
+.address-block__item {
+	margin-bottom: 20px;
+
+	span {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	span:first-child {
+		font-weight: 700;
+	}
+}

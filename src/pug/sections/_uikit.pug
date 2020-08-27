@@ -1,0 +1,89 @@
+section
+	.container
+		h1.title-1 Heading-1
+		h2.title-2 Heading-2
+		h3.title-3 Heading-3
+		h4.title-4 Heading-4
+		h5.title-5 Heading-5
+		
+			
+		.form-group.error
+			input(type="text" name="userName" )
+			span.fake-placeholder Имя*
+			span.error-notify
+			span.error-text Введите имя
+		br
+		br
+		.form-group.error
+			input(type="text" name="userName" )
+			span.fake-placeholder Имя*
+			span.error-notify
+			span.error-text Введите имя
+		+social-icons
+	.container
+		label.form-label
+			input.form-checkbox(type="checkbox" name="form-checkbox")
+			span.custom-checkbox
+			
+	.container
+		a(href="#").product-card
+			.product-card__img
+				picture
+					img(src="img/products/prod1.jpg" srcset="img/products/prod1@2x.jpg", alt="img")
+			.product-card__title
+				h3 Букет "Королева"
+				p 4890 руб.
+
+	.container
+		
+		+favor
+		+close
+		+table
+		+arrow
+		+openDrop
+		+times
+		+arrow-down
+		+icon-add
+		+icon-brach
+		+icon-heart
+		+cart-icon
+		+log-in
+		+search
+		+saleCard('action1', 27.02, ' Маленькая пицца пепперони или маргарита за&nbsp;200&nbsp;руб', 'Скидка действует при покупке большой пиццы')
+	.container(style="margin-top:50px; margin-bottom: 100px; ")
+		+basketItem
+	.container(style="margin-top:50px; margin-bottom: 100px; ")
+		#orders-list
+			.order-item
+				#heading1(data-toggle="collapse" data-target="#order1" aria-expanded="true" aria-controls="order1")
+					h1  bla-bla-bla
+
+				#order1.collapse.show( aria-labelledby="heading1" data-parent="#orders-list")
+					.order-item-body
+						.ruslist-table-cell__title-list.collapse.show
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+			.order-item
+				#heading2(data-toggle="collapse" data-target="#order2" aria-expanded="true" aria-controls="order2")
+					h1  bla-bla-bla
+
+				#order2.collapse( aria-labelledby="heading2" data-parent="#orders-list")
+					.order-item-body
+						.ruslist-table-cell__title-list.collapse.show
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+			.order-item
+				#heading3(data-toggle="collapse" data-target="#order3" aria-expanded="true" aria-controls="order3")
+					h1  bla-bla-bla
+
+				#order3.collapse( aria-labelledby="heading3" data-parent="#orders-list")
+					.order-item-body
+						.ruslist-table-cell__title-list.collapse.show
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года
+							p.sesson-title-item.link-item RUS пункты 6 лист 2019/2020 года

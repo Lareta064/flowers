@@ -1,0 +1,61 @@
+footer.footer#footer
+	.map
+		iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa6d1eecbc7aca11806c0009ed4d0ca8474816987e7339112b985b3b10ec96332&amp;source=constructor" width="100%" height="100%" frameborder="0")
+	.container
+		.row
+			.col-md-5.col-lg-4
+				.footer-content
+					a(href="#").footer-logo
+						img(src="img/main/footerLogo.png", alt="logo")
+					.footer-address
+						p  г.Москва, ул.Северянинский проезд д. 9 стр. 1
+						a(href="mailto: info@gmail.com") info@gmail.com
+					.footer-working-hours.text-2
+						span.working-hours__title прием заказов:
+						span.working-hours__info СР,ЧТ, ВС  с 15:00 - 00:00;   ПТ, ВТ - выходные дни
+					.footer-contacts.d-flex
+						a(href="tel:+79055555555") +7 (905) 555-55-55
+						+social-icons
+					button.page-btn2(data-toggle="modal" data-target="#callForm") Написать нам
+						i.far.fa-envelope
+					.copyright-text
+						span  &copy; 2018-2020.
+						span &nbsp;| Dia fresco | Доставка продуктов питания
+#back-top
+	a(href="#top")
+		span
+			i.fas.fa-angle-double-up
+
+//----MODAL WINDOW----//
+#callForm.modal.fade(tabindex="-1" role="dialog"  aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			.modal-form-title
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true")
+						i.fas.fa-times
+			.modal-body
+				.feedback-form
+					form#contact-form
+						h3 Оставьте свою заявку, и мы перезвоним вам в течение 5&nbsp;минут!
+						.form-group
+							input(type="text" name="userName" )
+							span.fake-placeholder Имя #[span *]
+							span.error-notify
+							span.error-text Введите имя
+						.form-group
+							input(type="text" name="userPhone"  class="phone")
+							span.fake-placeholder Телефон #[span *]
+							span.error-notify
+							span.error-text Введите номер телефона
+						.form-group
+							textarea(type="text" name="message"  )
+							span.fake-placeholder Комментарий к заказу
+						.form-group.agree-text
+							label(class="form-label")
+								input(class="form-checkbox" type="checkbox" name="agreePolitic")
+								span.custom-checkbox
+								| Принимаю  #[a(href="#") условия обработки] моих данных.
+						.form-group
+							input.page-btn2(type="submit" value="Отправить")
+					#answer

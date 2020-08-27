@@ -1,0 +1,50 @@
+header.header
+	.container
+		.header-content
+			.header-column
+				a(href="index.html").logo
+					img(src="img/main/logo.png", alt="logo")
+				.header-nav
+					.header-nav__row
+						.search-panel
+							.input-wraper
+								input(type="text" placeholder="Поиск...")
+								button.search-button
+									i.fas.fa-search
+
+
+						+social-icons
+					ul.header-menu
+						.menu-logo
+							img(src="img/main/logo.png", alt="logo")
+						li.active
+							a(href="index.html") Главная
+						li
+							a(href="catalog.html") Каталог
+						li
+							a(href="aboutus.html") О компании	
+						li
+							a(href="delivery-page.html") Доставка и оплата						
+						li
+							a(href="contacts.html") Контакты
+						li
+							a(href="contacts.html") Обмен и возврат
+						.menu-social
+							+social-icons
+			.fix-wrapper
+				.header-column.header-column--left
+					.contact-phone
+						a(href="tel:+79055555555") +7 (905) 555-55-55
+					.user-controls
+						.user-log-in
+							a(href="user-profile.html")
+								+log-in
+						.user-basket
+							a(href="page-basket.html")
+								+cart-icon
+								span.basket-value 2
+					.menu-toggle
+						span
+
+
+

@@ -1,0 +1,124 @@
+
+section.checkout-page.pt-30
+	.container
+		.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная
+			.brcrumg-item
+				a(href="#!") Оформление заказа
+		h1.page-title Оформление заказа
+		form.checkout-form
+			.row
+				.col-lg-6
+					.form-column
+						h3.title-3.mb-20 1. Контактные данные						
+							.form-group
+								input(type="text" name="userName" )
+								span.fake-placeholder Имя #[span *]
+								span.error-notify
+								span.error-text Введите имя
+							.form-group 
+								input(type="text" name="userPhone"  class="phone")
+								span.fake-placeholder Телефон #[span *]
+								span.error-notify
+								span.error-text Введите номер телефона
+							.form-group
+								input(type="text" name="addressStreet" )
+								span.fake-placeholder Улица #[span *]
+								span.error-notify
+								span.error-text Введите улицу
+							.form-group
+								input(type="text" name="addressHouse" )
+								span.fake-placeholder Дом #[span *]
+								span.error-notify
+								span.error-text Введите дом
+							.form-group
+								input(type="text" name="addressNumber" )
+								span.fake-placeholder Квартира #[span *]
+								span.error-notify
+								span.error-text Введите номер квартиры
+							.form-group
+								textarea(type="text" name="message"  )
+								span.fake-placeholder Комментарий к заказу
+				
+				.col-lg-6
+					.row
+						.col-md-6.form-column--2
+							.form-column
+								h3.title-3 2. Варианты доставки 
+								.form-block
+									+radioBlock('rad1', 'Доставка в прелах МКАДА:', 'Бесплатная доставка от - 2000 рублей.<br> Стоимость доставки 200 рублей.', 'radio-gr1','', 'checked', '+200 &#8381;')
+									+radioBlock('rad2', ' Доставка за пределами МКАДА:', ' Бесплатная доставка от 3000 рублей.<br>Стоимость доставки 350 рублей', 'radio-gr1','','','+350 &#8381;')
+							.form-column
+								h3.title-3 3. Способы оплаты
+								.form-block
+									+radioBlock('rad3', ' Оплата наличными', 'Оплата при получении лично или курьеру', 'radio-gr2','', 'check')
+									+radioBlock('rad4', ' Оплата через Яндекс', 'Оплата на сайте через систему Яндекс.Деньги', 'radio-gr2')
+									+radioBlock('rad5', ' Банковской картой онлайн', 'Оплата заказа на сайте через защищенный шлюз Яндекса', 'radio-gr2')
+									+radioBlock('rad6', 'Оплата картой при получении', 'Оплата банковской картой при получении заказа при самовывозе или получении курьером', 'radio-gr2')
+								
+						.col-md-6
+							.form-column
+								h3.title-3 4. Дополнительно
+								.form-block
+									+radioBlock('rad7', 'Как можно скорее', 'Мы доставляем заказ в течении 40 мин.', 'radio-gr3','', 'check')
+								.form-block
+									.form-group
+										input(type="radio" id="rad8" name="radio-gr3") 
+										label(for="rad8")
+											span Доставка на определенное время                      
+										
+										.form-group
+											input.setTime(type="text" name="DeliveryTime" )
+											span.fake-placeholder.pl-20 Введите время доставки #[span *]
+											
+								.form-block
+									.form-group.form-group--check
+										label(class="form-label")
+											input(class="form-checkbox" type="checkbox" name="promoCheck")
+											span.custom-checkbox
+											| У меня есть промокод
+										.set-promo
+											input(type="text" name="promoCode" )
+											span.fake-placeholder.pl-20 Введите промокод #[span *]
+											p.sale-text  Скидка по промокоду 10% 
+											.tooltip-group
+												span.tooltip-icon ?
+												.tooltip-div
+													button.close-toooltip
+														span
+															+times(16, 16)
+													p Найдите промокод на наших страницах ВКонтакте, в Facebook или Твиттере, где мы иногда будем их публиковать.
+								.form-block
+									.subscribes-block
+										.subscribes-block__top
+											p Согласен на отправку:
+											.subscribes-block__inputs
+												label.form-label sms
+													input.form-checkbox(type="checkbox" name='smsCheck' checked)
+													span.custom-checkbox
+												label.form-label Email
+													input.form-checkbox(type="checkbox" name='smsCheck')
+													span.custom-checkbox
+										p Мы не рассылаем спам. Вы будете получать только актуальную информацию о наших акциях.
+
+						.col-lg-6
+							.form-column
+								.total-amount
+									span.title-3 Сумма #[span.hide-mob заказа]:
+									span 14&nbsp;шт на сумму 
+									.basket-item__cost
+										.basket-item__cost-val.title-34 1650
+										.basket-item__cost-dim руб
+				.col-lg-6
+					.checkout-content__footer
+						.form-group.agree-text
+							label(class="form-label")
+									input(class="form-checkbox" type="checkbox" name="agreePolitic")
+									span.custom-checkbox
+									| Принимаю  #[a(href="#") условия обработки] моих данных.
+						.form-group.form-group--btn
+							input.page-button.page-button--red(type="submit" value="Отправить")
+							a(href="basket-page.html")
+								i.fas.fa-long-arrow-alt-left
+								| Назад к заказам

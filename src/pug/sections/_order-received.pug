@@ -1,0 +1,77 @@
+
+section.order-receiver
+	.brcrumg
+			.brcrumg-item
+				a(href="index.html") Главная
+			.brcrumg-item
+				a(href="") Подтверждение заказа
+	.container
+		h1.page-title Оформление заказа
+		p.title-light Ваш заказ получен
+		.order-table
+			.table-row.table-row--head
+				.row
+					.col-md-2
+						.table-cell.table-cell__img
+					.col-md-6
+						.table-cell.table-cell__deskrip
+							h5 Наименование
+					.col-md-2
+						.table-cell.table-cell__count
+							h5 Количество
+					.col-md-2
+						.table-cell.table-cell__amount
+							h5 Стоимость
+			+receivwedTableRow('product1', '"Шелковица Армения"', 'Урожай 2020 года. Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.', '650')
+			+receivwedTableRow('product2', 'Крыжовник Россия', 'Урожай 2020 года. Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.', '350')
+			+receivwedTableRow('product3','Крыжовник Россия', 'Урожай 2020 года. Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.', '450')
+			
+			.table-row.table-row__result
+				p Итого, сумма заказа с доставкой:
+				.total-amount.title-34
+					span 1365
+					span руб
+		.contacts-wrapper
+			.row
+				.col-md-4
+					.contacts-column
+						h4 контактные даннные
+						ul
+							li
+								span Имя:
+								p Иванов Иван Иванович
+							li
+								span Телефон:
+								p +7 999 88 77 66
+							li
+								span Email:
+								p normalno@gmail.com
+				.col-md-4
+					.contacts-column
+						h4 Адрес доставки
+						ul
+							li
+								span Улица:
+								p Кирова
+							li
+								span Дом:
+								p 27 "Б"
+							li
+								span Квартира:
+								p 29
+				.col-md-4
+					.contacts-column
+						h4 Доставка и оплата
+						ul
+							li
+								span Вариант доставки:
+								p Самовывоз
+							li
+								span Способ оплаты:
+								p Наличными
+							li
+								span Время доставки:
+								p Ближайшее время
+
+
+			

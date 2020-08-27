@@ -1,0 +1,11 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	+header([{hrefLink: 'index.html', text: 'Главная'}, {hrefLink: 'catalog.html', text: 'Каталог'}, {hrefLink: 'aboutus.html', text: 'О компании'}, {hrefLink: 'delivery-page.html', text: 'Доставка и оплата'},  {hrefLink: 'stocks.html', text: 'Акции', addClass: 'active'},  {hrefLink: 'contacts.html', text: 'Контакты'}, {hrefLink: 'returns.html', text: 'Обмен и возврат'}])
+	.content-wrapper
+		include ../sections/_page-sales.pug	
+		include ../sections/_footer.pug
+	
+block variables
+	-var title = "Акции и новости";

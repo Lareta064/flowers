@@ -1,0 +1,508 @@
+@font-face {
+	font-family: 'Chekharda-BoldItalic.ttf';
+	/* Имя шрифта */
+	src: url(../fonts/Chekharda-BoldItalic.ttf);
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	// height: 100%;
+	font-family: @basic;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 400;
+	color: @pr;
+}
+
+body.noscroll {
+	overflow: hidden;
+}
+
+.page-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	border: 3px solid @light;
+	height: 150px;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+p,
+label {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+button {
+	cursor: pointer;
+	padding: 0;
+	white-space: nowrap;
+}
+
+textarea,
+button,
+input {
+	outline: none !important;
+	border: none;
+}
+
+button {
+	background-color: transparent;
+}
+
+// ::-webkit-scrollbar {
+// 	/* 1 - скроллбар */
+// 	width: 10px;
+// 	height: 6px;
+// 	background-color: #FFFFFF;
+// }
+
+// ::-webkit-scrollbar-button {
+// 	/* 2 - кнопка */
+// }
+
+// ::-webkit-scrollbar-track {
+// 	/* 3 - трек */
+// 	background-color: #eeeeee;
+
+// }
+
+// ::-webkit-scrollbar-track-piece {
+// 	/* 4 - видимая часть трека */
+// }
+
+// ::-webkit-scrollbar-thumb {
+// 	/* 5 - ползунок */
+// 	border-radius: 10px;
+// 	background-color: @yellow;
+// }
+
+// ::-webkit-scrollbar-corner {
+// 	/* 6 - уголок */
+// }
+
+// ::-webkit-resizer {
+// 	/* 7 - изменение размеров */
+// }
+
+#overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	// backdrop-filter: blur(5px);
+	display: none;
+
+	z-index: 2;
+	background-color: rgba(255, 255, 255, .5);
+}
+
+#overlay.active {
+	display: block;
+}
+
+.container {
+
+	@media(min-width: 1230px) {
+		max-width: 1170px;
+		padding: 0;
+	}
+}
+
+.content-wrapper {
+
+	footer {
+		margin-top: auto;
+	}
+
+	section {
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		@media(max-width:1199px) {
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+
+		@media(max-width:767px) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+	}
+
+	section.pt-30 {
+		padding-top: 30px;
+	}
+
+}
+
+/*ТИПОГРАФИКА*/
+.t-upper {
+	text-transform: uppercase;
+}
+
+.page-title,
+.title-2 {
+
+	font-size: 30px;
+	line-height: 1.3333;
+}
+
+/*****************/
+h1,
+h2,
+h3,
+h5 {
+	font-family: @rb;
+}
+
+
+.title-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.slider-arrows {
+	width: 75px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slider-arrows div {
+	cursor: pointer;
+}
+
+.block-link {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	a {
+		font-family: @rsb;
+		font-size: 18px;
+		line-height: 24px;
+		color: @pr;
+		.tr;
+	}
+
+	.block-link__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 20px;
+		.tr;
+	}
+}
+
+.block-link:hover {
+	a {
+		color: @red;
+	}
+
+	.block-link__icon {
+		transform: rotate(135deg);
+	}
+}
+
+.title {
+	font-weight: 700;
+}
+
+.title-1 {
+	font-size: 50px;
+	line-height: 1.2;
+
+}
+
+.block-title {
+	font-size: 20px;
+	line-height: 1.2;
+	font-family: @rsb;
+	font-weight: 600;
+}
+
+.title-2 {
+	font-size: 30px;
+	line-height: 1.333333;
+}
+
+.title-4 {
+	font-size: 20px;
+	line-height: 1.2;
+	font-family: @rsb;
+}
+
+.title-5 {
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+.bodyBold {
+	font-size: 18px;
+	line-height: 1.3888888;
+}
+
+/*****************/
+
+.page-title {
+	margin-bottom: 0.8695em;
+}
+
+.title-34 {
+
+	font-size: 34px;
+	line-height: 1.177;
+}
+
+
+
+.text-24 {
+	font-size: 24px;
+	line-height: 29px;
+}
+
+
+.title-light {
+	font-family: @titleLight;
+	font-size: 25px;
+	line-height: 1.2;
+	font-weight: 400;
+}
+
+.text-2 {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.text-12 {
+	font-size: 12px;
+	line-height: 19px;
+}
+
+.text-16 {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.text-16--bold {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 700;
+}
+
+.text-16--light {
+	font-size: 16px;
+	line-height: 24px;
+	color: #A3A7B4;
+}
+
+.btn-text {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.mb-19 {
+	margin-bottom: 20px;
+}
+
+.marker-list li {
+	position: relative;
+	padding-left: 30px;
+
+	&+li {
+		margin-top: 25px;
+	}
+}
+
+.marker-list li:before {
+	content: '\2714';
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 18px;
+	color: @green;
+}
+
+/*кнопка вверх*/
+#back-top {
+	position: fixed;
+	z-index: 10;
+	bottom: 70px;
+	right: 10px;
+
+	@media(min-width: 768px) {
+		right: 30px;
+		bottom: 20px;
+	}
+
+	@media(min-width: 992px) {
+		right: 50px;
+	}
+}
+
+#back-top span {
+	display: none;
+	text-align: center;
+	width: 47px;
+	height: 47px;
+	display: block;
+	margin-bottom: 7px;
+
+	&:hover {
+		opacity: .8
+	}
+
+}
+
+#back-top span i {
+	color: @yellow;
+	font-size: 46px;
+	font-weight: 700;
+}
+
+@keyframes swingElement {
+	0% {
+		transform: translateY(0px)
+	}
+
+	50% {
+		transform: translateY(15px)
+	}
+
+	100% {
+		transform: translateY(0px)
+	}
+}
+
+.brcrumg {
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.brcrumg-item {
+	position: relative;
+
+	font-size: 12px;
+	line-height: 19px;
+
+	a {
+		color: #A3A7B4;
+	}
+
+	&:hover a {
+		color: @pr;
+	}
+
+	&+& {
+		margin-left: 15px;
+	}
+
+	&:after {
+		content: '';
+
+		width: 1px;
+		height: 14px;
+		background-color: rgba(128, 128, 128, .7);
+		position: absolute;
+		right: -9px;
+		top: 2px;
+
+
+	}
+
+
+}
+
+.brcrumg-item:last-child {
+	a {
+		color: @pr;
+		cursor: default;
+	}
+
+	&:after {
+		display: none;
+	}
+
+	&:hover {
+		color: @pr;
+
+		a {
+			opacity: 1;
+		}
+
+	}
+}
+
+.badge {
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 30px;
+	border-radius: 30px;
+	background-color: #E9FBE2;
+	display: inline-flex;
+	align-items: center;
+
+	p {
+		margin-right: 6px;
+		font-size: 12px;
+		color: #313131;
+		font-weight: 400;
+	}
+
+	span {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		cursor: pointer;
+
+		svg path {
+			transition: .3s;
+		}
+
+		&:hover {
+			svg path {
+				fill: rgba(0, 0, 0, .3);
+			}
+		}
+	}
+
+}

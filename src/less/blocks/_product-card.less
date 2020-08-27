@@ -1,0 +1,137 @@
+// карточка продукта
+.product-card-item {
+	position: relative;
+
+	.icon-group {
+		position: absolute;
+		bottom: 105px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 3;
+		display: flex;
+		align-items: center;
+		opacity: 0;
+		.tr;
+
+		a {
+			display: inline-flex;
+			height: 35px;
+			width: 35px;
+			border-radius: 50%;
+			border: 1px solid @ac3;
+			justify-content: center;
+			align-items: center;
+			color: @ac3;
+			.tr;
+
+			path {
+				fill: @ac3;
+				.tr;
+			}
+
+			&.ic-cart path {
+				fill: transparent;
+				stroke: @ac3;
+				.tr;
+			}
+
+			&+a {
+				margin-left: 10px;
+			}
+
+			&:hover {
+				border: 1px solid @ac1;
+				color: @ac1;
+
+				path {
+					fill: @ac1;
+				}
+
+				&.ic-cart path {
+					fill: transparent;
+					stroke: @ac1;
+				}
+			}
+
+		}
+
+	}
+}
+
+.product-card {
+	display: block;
+	border-radius: 10px;
+	overflow: hidden;
+	max-width: 270px;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+
+.product-card__img {
+	border-radius: 10px;
+	overflow: hidden;
+	object-fit: cover;
+	position: relative;
+	.tr;
+}
+
+.product-card__img:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+	opacity: 0;
+	.tr;
+}
+
+.product-card__title {
+	text-align: center;
+	margin-top: 30px;
+
+	h3 {
+		font-size: 16px;
+		line-height: 26px;
+		color: @pr2;
+		font-family: @rr;
+		.tr;
+	}
+
+	p {
+		font-size: 20px;
+		line-height: 1.4;
+		font-family: @rb;
+		color: @pr2;
+		.tr;
+	}
+}
+
+.product-card-item:hover {
+	.product-card__img {
+		box-shadow: 0px 4px 20px rgba(226, 23, 54, 0.1);
+
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	.icon-group {
+		opacity: 1;
+	}
+
+	.product-card__title {
+		h3 {
+			color: @pr;
+		}
+
+		p {
+			color: @red1;
+		}
+	}
+}
+
+// ===карточка продукта
