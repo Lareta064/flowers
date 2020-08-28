@@ -99,40 +99,49 @@ $(document).ready(function () {
 	let productSlider = $('.product-slider');
 	productSlider.owlCarousel({
 		items: 3,
-		nav: true,
-		navText: ["<span class='ar-left'><i class='fas fa-angle-left'></i></span>", "<span class='ar-right'><i class='fas fa-angle-right'></i></span>"],
+
+		// navText: ["<span class='ar-left'><i class='fas fa-angle-left'></i></span>", "<span class='ar-right'><i class='fas fa-angle-right'></i></span>"],
 		navSpeed: 1000,
 		smartSpeed: 1000,
 		loop: true,
 		stagePadding: 10,
 		margin: 10,
+		dots: false,
 		responsive: {
 			0: {
 				items: 1,
-				nav: false,
+
 				dots: true
 			},
 			768: {
 				items: 2,
-				dots: false,
+
 				margin: 20,
 
 			},
 			1000: {
 				items: 3,
-				nav: true,
+
 				stagePadding: 0,
 
 			},
 			1200: {
 				items: 4,
-				nav: true,
+
 				stagePadding: 0,
 
 			}
 		}
 
 	});
+	//Назначаем наши кнопки слайдеру новые предложения
+	$('#newProduct-next').click(function () {
+		productSlider.trigger("next.owl.carousel");
+	});
+	$("#newProduct-prev").click(function () {
+		productSlider.trigger("prev.owl.carousel");
+	});
+
 	// слайдер с отзывами
 	let reviewSlider = $('.review-slider-wrapper');
 	reviewSlider.owlCarousel({
@@ -144,10 +153,10 @@ $(document).ready(function () {
 
 	});
 	//Назначаем наши кнопки слайдеру продуктов
-	$('.rev-next').click(function () {
+	$('#rev-next').click(function () {
 		reviewSlider.trigger("next.owl.carousel");
 	});
-	$(".rev-prev").click(function () {
+	$("#rev-prev").click(function () {
 		reviewSlider.trigger("prev.owl.carousel");
 	});
 

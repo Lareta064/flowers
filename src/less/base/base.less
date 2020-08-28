@@ -191,7 +191,7 @@ h5 {
 	font-family: @rb;
 }
 
-
+// строка Заголовок + кнопки слайдера
 .title-row {
 	display: flex;
 	justify-content: space-between;
@@ -200,15 +200,40 @@ h5 {
 	margin-bottom: 30px;
 }
 
+.title-row-column {
+	display: flex;
+}
+
 .slider-arrows {
 	width: 75px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 }
 
 .slider-arrows div {
 	cursor: pointer;
+}
+
+.ar-next,
+.ar-prev {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 35px;
+	border: 1px solid @sec;
+	transition: .3s;
+
+	&:hover {
+		border-color: @ac3;
+		background: @ac3;
+
+		path {
+			fill: #fff;
+		}
+	}
 }
 
 .block-link {

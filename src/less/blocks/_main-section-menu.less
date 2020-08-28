@@ -1,35 +1,8 @@
-/*****ГЛАВНАЯ - СЕКЦИЯ КАРТОЧКИ МЕНЮ****/
-.main-menu {
-	padding-top: 95px;
-	padding-top: 145px;
-
-	padding-bottom: 90px;
-	color: @black;
-	position: relative;
-
-
-
-	@media(max-width:1199px) {
-		padding-top: 115px;
-		margin-top: -55px;
-		padding-bottom: 60px;
-	}
-
-	@media(max-width:767px) {
-		padding-top: 100px;
-		padding-bottom: 40px;
-		margin-top: -70px;
-	}
-
-}
-
-.main-menu .title-2 {
-	margin-bottom: 0.54em;
-}
+/*****ГЛАВНАЯ - новые предложения****/
 
 
 .menu-products__content {
-	padding-top: 20px;
+	padding-top: 80px;
 }
 
 .product-slider__item {
@@ -37,77 +10,6 @@
 	padding-bottom: 30px;
 }
 
-.product-slider {
-	.owl-nav {
-		position: absolute;
-		right: 0;
-		top: -35px;
-		width: 75px;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.owl-prev,
-	.owl-next {
-		span {
-			display: block;
-			width: 35px;
-			height: 35px;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border: 1px solid #8F8F8F;
-			color: #8F8F8F;
-			background-color: #fff;
-			transition: .5s;
-			font-size: 14px;
-
-			&:hover {
-
-				border-color: @ac3;
-				background-color: @ac3;
-				color: #fff;
-			}
-
-		}
-	}
-
-	.owl-dots {
-		position: absolute;
-		bottom: 0px;
-		left: 0;
-		right: 0;
-		display: flex;
-		justify-content: center;
-
-		@media(min-width: 768px) {
-			display: none;
-		}
-	}
-
-	.owl-dots button.owl-dot {
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-		border: 2px solid @green;
-
-		&+.owl-dot {
-			margin-left: 10px;
-		}
-
-		&.active {
-			background-color: rgba(88, 176, 49, .6);
-		}
-	}
-}
-
-.product-slider-options {
-	display: flex;
-	padding-right: 95px;
-	justify-content: space-between;
-
-	.block-title {
-		line-height: unset;
-	}
+.newProduct-arrows {
+	margin-left: 20px;
 }
