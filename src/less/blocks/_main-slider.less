@@ -16,25 +16,26 @@
 	}
 
 	@media(max-width:991px) {
-		height: 450px;
+		height: 460px;
 	}
 
 	@media(max-width:767px) {
+		background-position: 64% top;
 		height: calc(~'100vh - 130px');
 		height: 400px;
 	}
 
 }
 
-// .banner-item:before {
-// 	content: '';
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	bottom: 0;
-// 	right: 0;
-// 	background-color: rgba(0, 0, 0, .5);
-// }
+.banner-item:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, .5);
+}
 
 .slide-content {
 	height: 693px;
@@ -47,6 +48,7 @@
 	max-width: 630px;
 	position: relative;
 	padding-top: 120px;
+
 
 
 	.page-button {
@@ -62,49 +64,48 @@
 
 	@media(max-width:1439px) {
 		height: 600px;
+		padding-top: 105px;
 	}
 
 	@media(max-width:1199px) {
 		margin-top: 0;
-		max-width: 95%;
+		max-width: 75%;
 		height: 500px;
 		font-size: 24px;
-		margin-left: auto;
-		margin-right: auto;
+
+		padding-top: 95px;
 	}
 
 	@media(max-width:991px) {
 		height: 450px;
+		max-width: 530px;
 		font-size: 20px;
+
+		padding-top: 75px;
 	}
 
 	@media(max-width:767px) {
-		max-width: 100%;
+		max-width: 75%;
 		font-size: 18px;
 		height: 400px;
+		padding-top: 55px;
 
 	}
 
 	@media(max-width:424px) {
 		font-size: 15px;
+		max-width: 100%;
 	}
 
 }
 
-.slide-suptitle {
-	.title-2;
+.slide-content .title-2 {
+
 	margin-bottom: 10px;
 	color: @red;
-	font-family: @rb;
-
 
 }
 
-.slide-title {
-	.title-1;
-	font-family: @rb;
-
-}
 
 .light-text {
 	margin-top: 25px;
@@ -112,6 +113,7 @@
 	line-height: 1.62;
 
 }
+
 
 .product-descrip {
 	font-size: 1em;

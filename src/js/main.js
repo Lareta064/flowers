@@ -55,47 +55,47 @@ $(document).ready(function () {
 		})
 	}
 	//  Показать панель категорий
-	if (window.innerWidth > 1199) {
-		for (let item of mobMenuItem) {
-			if (item == menuCatLink) {
-				item.addEventListener('mouseenter', function () {
-					catPanel.classList.add('active');
-				});
-			} else {
-				item.addEventListener('mouseenter', function () {
-					catPanel.classList.remove('active');
-				});
-			}
-		}
-	}
+	// if (window.innerWidth > 1199) {
+	// 	for (let item of mobMenuItem) {
+	// 		if (item == menuCatLink) {
+	// 			item.addEventListener('mouseenter', function () {
+	// 				catPanel.classList.add('active');
+	// 			});
+	// 		} else {
+	// 			item.addEventListener('mouseenter', function () {
+	// 				catPanel.classList.remove('active');
+	// 			});
+	// 		}
+	// 	}
+	// }
 	// скрыть панель категорий, при уводе с нее мышки
-	catPanel.addEventListener('mouseleave', function () {
-		this.classList.remove('active');
-	});
+	// catPanel.addEventListener('mouseleave', function () {
+	// 	this.classList.remove('active');
+	// });
 	//отменить наведение на пункт меню "Каталог" при прокрутке страницы
-	const headerTop = document.getElementById('header-top');
-	const menuLiCatalog = document.querySelector('li[data-role ="show-catalog"]');
+	// const headerTop = document.getElementById('header-top');
+	// const menuLiCatalog = document.querySelector('li[data-role ="show-catalog"]');
 
-	window.addEventListener('scroll', function () {
+	// window.addEventListener('scroll', function () {
 
-		if (window.pageYOffset > 0) {
-			console.log(window.pageYOffset);
-			console.log(headerTop.classList);
-			headerTop.classList.add('fixed');
-		} else {
-			headerTop.classList.remove('fixed');
-		}
-		if (menuLiCatalog) {
-			if (window.pageYOffset > 10) {
-				menuLiCatalog.removeAttribute('id');
-				catPanel.classList.remove('active');
-			} else {
-				menuLiCatalog.setAttribute('id', 'catPanelItem');
-			}
-		}
-	});
-	// слайдер Продукты на главной
-	//Делегируем события кнопок next prev по умолчанию нашим кнопкам, которые могут находится ыне контейнера слайдера
+	// 	if (window.pageYOffset > 0) {
+	// 		console.log(window.pageYOffset);
+	// 		console.log(headerTop.classList);
+	// 		headerTop.classList.add('fixed');
+	// 	} else {
+	// 		headerTop.classList.remove('fixed');
+	// 	}
+	// 	if (menuLiCatalog) {
+	// 		if (window.pageYOffset > 10) {
+	// 			menuLiCatalog.removeAttribute('id');
+	// 			catPanel.classList.remove('active');
+	// 		} else {
+	// 			menuLiCatalog.setAttribute('id', 'catPanelItem');
+	// 		}
+	// 	}
+	// });
+
+	// слайдер Новые предложения на главной
 	let productSlider = $('.product-slider');
 	productSlider.owlCarousel({
 		items: 3,
@@ -104,30 +104,26 @@ $(document).ready(function () {
 		navSpeed: 1000,
 		smartSpeed: 1000,
 		loop: true,
-		stagePadding: 10,
+		stagePadding: 20,
 		margin: 10,
 		dots: false,
+		slideBy: 2,
 		responsive: {
 			0: {
 				items: 1,
-
-				dots: true
 			},
 			768: {
 				items: 2,
-
-				margin: 20,
+				stagePadding: 50,
 
 			},
 			1000: {
 				items: 3,
-
-				stagePadding: 0,
+				// stagePadding: 0,
 
 			},
 			1200: {
 				items: 4,
-
 				stagePadding: 0,
 
 			}
@@ -141,6 +137,75 @@ $(document).ready(function () {
 	$("#newProduct-prev").click(function () {
 		productSlider.trigger("prev.owl.carousel");
 	});
+
+	// слайдер Популярные предложения на главной
+	let popularSlider = $('.popular-slider');
+
+	popularSlider.owlCarousel({
+		items: 1,
+		navSpeed: 1000,
+		smartSpeed: 1000,
+		loop: true,
+		stagePadding: 20,
+		margin: 10,
+		dots: false,
+		slideBy: 2,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			768: {
+				items: 2,
+				stagePadding: 50,
+
+			},
+			1000: {
+				items: 3,
+				// stagePadding: 0,
+
+			},
+			1200: {
+				items: 4,
+				stagePadding: 0,
+
+			}
+		}
+
+	});
+	//Назначаем наши кнопки слайдеру Популярные предложения
+	$('#popular-next').click(function () {
+		popularSlider.trigger("next.owl.carousel");
+	});
+	$("#popular-prev").click(function () {
+		popularSlider.trigger("prev.owl.carousel");
+	});
+
+
+	// слайдер Выгодные предложения
+	let offerSlider = $('.offer-slider');
+	offerSlider.owlCarousel({
+		items: 1,
+		navSpeed: 1000,
+		smartSpeed: 1000,
+		loop: true,
+		margin: 10,
+		dots: false,
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+		mouseDrag: false,
+		autoplay: true,
+		autoplayHoverPause: true,
+		autoplaySpeed: 2000
+
+	});
+	//Назначаем наши кнопки слайдеру новые предложения
+	$('#offer-next').click(function () {
+		offerSlider.trigger("next.owl.carousel");
+	});
+	$("#offer-prev").click(function () {
+		offerSlider.trigger("prev.owl.carousel");
+	});
+
 
 	// слайдер с отзывами
 	let reviewSlider = $('.review-slider-wrapper');
@@ -177,10 +242,6 @@ $(document).ready(function () {
 		animateIn: 'fadeIn',
 		navText: ["<span class='arrow-left'><i class='fas fa-chevron-left'></i></span>", "<span class='arrow-left'><i class='fas fa-chevron-right'></i></span>"],
 
-	});
-	//-lazy
-	$(function () {
-		$('.lazy').lazy();
 	});
 
 	/** Счетчик количества **/

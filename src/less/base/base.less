@@ -143,6 +143,10 @@ button {
 	}
 }
 
+section {
+	padding-top: 150px;
+}
+
 .content-wrapper {
 
 	footer {
@@ -198,10 +202,27 @@ h5 {
 	align-items: center;
 	width: 100%;
 	margin-bottom: 30px;
+
+	@media(max-width:767px) {
+		display: block;
+		margin-bottom: 0;
+
+		h2 {
+			margin-bottom: 20px;
+		}
+	}
+
+	h2 {
+		line-height: unset;
+	}
 }
 
 .title-row-column {
 	display: flex;
+
+	@media(max-width:767px) {
+		justify-content: space-between;
+	}
 }
 
 .slider-arrows {
@@ -290,6 +311,11 @@ h5 {
 	line-height: 1.333333;
 }
 
+.head-2 {
+	font-size: 40px;
+	line-height: 1.25;
+}
+
 .title-4 {
 	font-size: 20px;
 	line-height: 1.2;
@@ -299,6 +325,36 @@ h5 {
 .title-5 {
 	font-size: 20px;
 	line-height: 1.4;
+}
+
+@media(max-width:1199px) {
+	.title-1 {
+		font-size: 40px;
+	}
+
+	.title-2 {
+		font-size: 24px;
+	}
+}
+
+@media(max-width:991px) {
+	.title-1 {
+		font-size: 35px;
+	}
+
+	.title-2 {
+		font-size: 22px;
+	}
+}
+
+@media(max-width:767px) {
+	.title-1 {
+		font-size: 30px;
+	}
+
+	.title-2 {
+		font-size: 20px;
+	}
 }
 
 .bodyBold {

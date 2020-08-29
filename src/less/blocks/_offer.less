@@ -1,0 +1,125 @@
+.offer {
+	padding-bottom: 100px;
+
+	.offer-item__text {
+		h2 {
+			color: @pr2;
+		}
+
+		.title-2 {
+			font-family: @rb;
+			margin-top: 10px;
+			color: @red;
+		}
+	}
+
+	.offer-desk {
+		margin-top: 10px;
+	}
+}
+
+.offer-content {
+	position: relative;
+
+	@media(min-width: 1200px) {
+		.offer-arrows {
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 2;
+		}
+	}
+}
+
+.offer-item__text {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media(max-width:1199px) {
+		justify-content: center;
+	}
+
+	h2.head {
+
+		@media(min-width:1200px) {
+			margin-top: auto;
+		}
+	}
+}
+
+.offer-item__text .page-button {
+	margin-top: 50px;
+	padding-left: 47px;
+	padding-right: 47px;
+
+	@media(max-width:767px) {
+		margin-bottom: 50px;
+	}
+}
+
+.offer-arrows {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.offer-arrows .ar-next {
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+// ТАЙМЕР
+.time-counter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+
+	.time-counter-item {
+		border: 2px solid #E8E9EA;
+		border-radius: 10px;
+		min-width: 66px;
+		min-height: 77px;
+		max-width: 66px;
+		max-height: 77px;
+		display: flex;
+
+		.item-val {
+			margin: auto;
+		}
+
+		&+.time-counter-item {
+			margin-left: 20px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 24px;
+			border-bottom: 1px solid #E8E9EA;
+			padding-bottom: 4px;
+			margin-bottom: 2px;
+			font-family: @rsb;
+		}
+
+		span {
+			display: block;
+			font-size: 12px;
+			line-height: 17px;
+			color: @pr2;
+		}
+
+		@media(max-width:374px) {
+			&+.time-counter-item {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.offer-item__img {
+	max-width: 470px;
+	margin-left: auto;
+	margin-right: auto;
+
+}

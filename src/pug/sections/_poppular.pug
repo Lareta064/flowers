@@ -1,0 +1,24 @@
+section.popular
+	.container
+		.popular__content
+			.title-row
+				h2.block-title Популярные предложения:
+				// ===== стрелки слайдера
+				.popular-arrows.slider-arrows
+					.ar-next#popular-next
+						+left-arrow
+					.ar-prev#popular-prev
+						+right-arrow
+			.popular-slider.owl-carousel
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod1', 270,  4890)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod2', 270,  4500)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod3', 270,  5000)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod4', 270,  4250)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod1', 270,  4890)
+				.product-slider__item
+					+main-product-card('Букет “Королева”', 'prod2', 270,  4500)
