@@ -45,7 +45,7 @@
 
 .delivery-info {
 	padding-left: 34px;
-	border-left: 4px solid #E9FBE2;
+	border-left: 4px solid @ac4;
 
 	height: 100%;
 
@@ -73,8 +73,8 @@
 	}
 }
 
-.address-block__item {
-	margin-bottom: 20px;
+.work-time_item {
+	margin-top: 40px;
 
 	span {
 		display: block;
@@ -83,5 +83,30 @@
 
 	span:first-child {
 		font-weight: 700;
+	}
+}
+
+.payment-type {
+	display: flex;
+	align-items: center;
+
+	@media(max-width:767px) {
+		display: block;
+	}
+
+	p {
+		font-family: @rb;
+		font-size: 13px;
+	}
+}
+
+.payment-type__logo {
+	margin-left: 23px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	img+img {
+		margin-left: 20px;
 	}
 }

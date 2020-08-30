@@ -2,16 +2,18 @@
 	background: #FFFFFF;
 	border: 1px solid #EEEEEE;
 	box-sizing: border-box;
-	border-radius: 20px;
+	border-radius: 10px;
 	padding: 20px;
+	padding-left: 18px;
+	padding-bottom: 5px;
 
 	h4 {
 		font-size: 20px;
-		line-height: 1.4;
+		line-height: 1.1;
 
 		color: @pr;
 		font-family: @rb;
-		padding-bottom: 12px;
+		padding-bottom: 20px;
 		border-bottom: 1px solid #EEEEEE;
 
 
@@ -19,11 +21,12 @@
 
 	&+.filter-panel__block {
 		margin-top: 30px;
+		padding-top: 0;
 	}
 }
 
 .filter-panel__menu {
-	padding-top: 10px;
+	padding-top: 14px;
 
 	li {
 		position: relative;
@@ -51,8 +54,8 @@
 		border-bottom: 1px solid @pr;
 		transform: rotate(45deg);
 		position: absolute;
-		top: 2px;
-		right: 0;
+		top: 6px;
+		right: 4px;
 	}
 
 	.drop-list:hover:after {
@@ -187,7 +190,7 @@ li.drop-list.active:after {
 }
 
 .form-checkbox {
-	margin-right: 10px;
+	// margin-right: 10px;
 
 }
 
@@ -199,16 +202,22 @@ li.drop-list.active:after {
 
 .filter-checkbox label {
 	display: block;
-	margin-bottom: 14px;
-	font-size: 14px;
+
+	font-size: 12px;
 	line-height: 17px;
 	cursor: pointer;
 
+
+
 	span {
-		font-size: 14px;
+		font-size: 12px;
 		line-height: 17px;
 		color: #8F8F8F;
 	}
+}
+
+.filter-checkbox+.filter-checkbox {
+	margin-top: 17px;
 }
 
 .filter-type {
@@ -217,10 +226,10 @@ li.drop-list.active:after {
 	border-bottom: 1px solid #EEEEEE;
 
 	h5 {
-		font-size: 16px;
-		line-height: 1.5;
-		font-weight: 700;
-		margin-bottom: 15px;
+		font-size: 18px;
+		line-height: 25px;
+		font-family: @rb;
+		margin-bottom: 17px;
 	}
 
 }
@@ -228,7 +237,7 @@ li.drop-list.active:after {
 .filter-panel .filter-checkbox {
 	.custom-checkbox {
 		position: relative;
-		top: 1px;
+		top: 2px;
 		overflow: hidden;
 		background-image: none;
 		border: 1px solid #BFBFBF;
@@ -279,10 +288,12 @@ li.drop-list.active:after {
 
 	flex-wrap: wrap;
 
+
 	.form-group {
 		margin-bottom: 20px;
 		width: 22px;
 		margin-right: 18px;
+
 
 
 	}
@@ -298,6 +309,7 @@ li.drop-list.active:after {
 
 .filter-type .fake-label {
 	position: absolute;
+	top: 0;
 	width: 22px;
 	height: 22px;
 	border-radius: 50%;

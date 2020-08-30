@@ -20,8 +20,8 @@ body {
 	width: 100%;
 	// height: 100%;
 	font-family: @basic;
-	font-size: 16px;
-	line-height: 1.5;
+	font-size: 14px;
+	line-height: 24px;
 	font-weight: 400;
 	color: @pr;
 }
@@ -347,9 +347,13 @@ h5 {
 	font-family: @rsb;
 }
 
+.title-3,
+.title-3 p,
+.title-3 a,
 .title-5 {
 	font-size: 20px;
 	line-height: 1.4;
+	font-family: @rb;
 }
 
 @media(max-width:1199px) {
@@ -397,6 +401,10 @@ h5 {
 
 	font-size: 34px;
 	line-height: 1.177;
+
+	@media(max-width:767px) {
+		font-size: 29px;
+	}
 }
 
 
@@ -452,20 +460,29 @@ h5 {
 
 .marker-list li {
 	position: relative;
-	padding-left: 30px;
+	padding-left: 25px;
 
 	&+li {
-		margin-top: 25px;
+		margin-top: 17px;
 	}
 }
 
 .marker-list li:before {
-	content: '\2714';
+
+	content: '';
 	position: absolute;
+	width: 8px;
+	height: 8px;
+	background-color: @red1;
+	border-radius: 50%;
 	left: 0;
-	top: 0;
-	font-size: 18px;
-	color: @green;
+	top: 58%;
+	transform: translateY(-50%);
+
+	@media(max-width:767px) {
+		top: 50%;
+	}
+
 }
 
 /*кнопка вверх*/
@@ -527,8 +544,8 @@ h5 {
 .brcrumg-item {
 	position: relative;
 
-	font-size: 12px;
-	line-height: 19px;
+	font-size: 10px;
+	line-height: 14px;
 
 	a {
 		color: #A3A7B4;

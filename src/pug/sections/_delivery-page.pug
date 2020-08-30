@@ -10,7 +10,7 @@ section.delivery.pt-30
 		article.border-block
 			h3.title-34 Круглосуточная доставка по Москве и Московской области 
 			.text-16
-				p Dia fresco - осуществляет доставку продуктов, на дом или прямо к Вам в офис.
+				p M Flowers - осуществляет доставку цветов, на дом или прямо к Вам в офис.
 		article
 			.row
 				.col-lg-8
@@ -32,22 +32,29 @@ section.delivery.pt-30
 						h3.title-3 Оплата
 						.text-16
 							p Вы оплачиваете заказ при получении, безналичным и наличным расчетом. 
-							p Мы принимаем: 
-								span
-									img(src="img/main/payments.png", alt="виды оплаты")
+						.payment-type
+							p Мы принимаем:
+							.payment-type__logo
+								img(src="img/payment/logo-mir.png", alt="img" width="56")
+								img(src="img/payment/logo-qiwi-koshelek.png", alt="img" width="56")
+								img(src="img/payment/logo-visa.png", alt="img" width="56")
+								img(src="img/payment/logo-yandex-money.png", alt="img" width="56")
+								img(src="img/payment/logo-mastercard.png", alt="img" width="26")
 
 				.col-lg-4
 					.delivery-info
 						.title-3
 							p Круглосуточная поддержка клиентов и оформления заказа:
-								a(href="tel:+74998416793") +7 499 841-67-93
-								a(href="tel:+74998416793") +7 977 675-66-30.
+								a(href="tel:+74998416793" itemprop="telephone") +7 499 841-67-93
+								a(href="tel:+74998416793" itemprop="telephone") +7 977 675-66-30.
 							
 						.address-block
-							.address-block__item
-								span Адрес:
-								span  г.Москва, ул.Северянинский проезд д. 9 стр. 1
-							.address-block__item
+							.address-block__item(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+								p Адрес:
+								p
+									span(itemprop="addressLocality")  г.Москва, 
+									span(itemprop="streetAddress") ул. Королева, 12 
+							.work-time_item
 								span Режим работы:								
 								span - Среда - Четверг - Воскресенье с 15:00 - 00:00
 								span - Пятница - Суббота 15:00-02:00
