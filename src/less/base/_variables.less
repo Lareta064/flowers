@@ -1,13 +1,11 @@
 @black: #212123;
 @pr: #212123;
 @red1: #E21736;
-;
 @primary: #212123;
 @grey: #bfbfbf;
 @light: #eeeeee;
-@red1: #E21736;
 @yellow: #E21736;
-@green: rgb(88, 176, 49);
+@green: #E21736;
 @lgYellow: #E9FBE2;
 
 @red: #DF4329;
@@ -20,6 +18,7 @@
 @titleLight: 'Rawline Regular';
 @rb: 'Rawline Bold';
 @rsb: 'Rawline SemiBold';
+@r900: 'Rawline Black';
 @mainText: #212123;
 
 @pr: #212123;
@@ -33,6 +32,7 @@
 @ac2: #FC778D;
 @ac3: #FF8480;
 @ac4: #FFF9F9;
+@green1: #3AC895;
 
 
 .tr {
@@ -41,6 +41,21 @@
 
 .br10 {
 	border-radius: 10px;
+}
+
+.cardBorder {
+	border: 5px solid @red;
+	.br10;
+
+	@media(max-width: 767px) {
+		border-width: 3px;
+	}
+
+	img {
+		.br10;
+	}
+
+	&:hover {}
 }
 
 .titleBold {

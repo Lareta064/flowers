@@ -143,8 +143,24 @@ button {
 	}
 }
 
-section {
+.pt-150 {
 	padding-top: 150px;
+
+	@media(max-width:1439px) {
+		padding-top: 120px;
+	}
+
+	@media(max-width:1199px) {
+		padding-top: 110px;
+	}
+
+	@media(max-width:991px) {
+		padding-top: 90px;
+	}
+
+	@media(max-width:767px) {
+		padding-top: 70px;
+	}
 }
 
 .content-wrapper {
@@ -178,6 +194,10 @@ section {
 /*ТИПОГРАФИКА*/
 .t-upper {
 	text-transform: uppercase;
+}
+
+.text-white {
+	color: #fff;
 }
 
 .page-title,
@@ -311,9 +331,14 @@ h5 {
 	line-height: 1.333333;
 }
 
+.head-1,
 .head-2 {
 	font-size: 40px;
 	line-height: 1.25;
+}
+
+.head-1 {
+	margin-bottom: 40px;
 }
 
 .title-4 {
@@ -556,23 +581,24 @@ h5 {
 .badge {
 	padding-left: 15px;
 	padding-right: 15px;
-	height: 30px;
+	height: 20px;
+	line-height: 20px;
 	border-radius: 30px;
-	background-color: #E9FBE2;
+	background-color: @ac4;
 	display: inline-flex;
 	align-items: center;
 
 	p {
-		margin-right: 6px;
-		font-size: 12px;
-		color: #313131;
+		margin-right: 3px;
+		font-size: 10px;
+		color: #8F8F8F;
 		font-weight: 400;
 	}
 
 	span {
 		display: inline-block;
-		width: 16px;
-		height: 16px;
+		width: 15px;
+		height: 15px;
 		cursor: pointer;
 
 		svg path {
@@ -581,7 +607,7 @@ h5 {
 
 		&:hover {
 			svg path {
-				fill: rgba(0, 0, 0, .3);
+				fill: #8F8F8F;
 			}
 		}
 	}

@@ -1,6 +1,9 @@
 // карточка продукта
 .product-card-item {
 	position: relative;
+	max-width: 270px;
+	margin-left: auto;
+	margin-right: auto;
 
 	.icon-group {
 		position: absolute;
@@ -66,6 +69,35 @@
 	margin-left: auto;
 	margin-right: auto;
 	cursor: pointer;
+
+	.price-block {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		margin-top: 10px;
+
+
+		.oldPrice {
+			// position: absolute;
+			// top: 5px;
+			// right: -20px;
+			// transform: translateX(100%);
+			font-size: 14px;
+			line-height: 24px;
+			color: @ac1;
+			text-decoration: line-through;
+			// display: block;
+			font-family: @rr;
+			margin-left: 20px;
+
+		}
+	}
+
+	.product-card__desk {
+		display: none;
+	}
+
+
 }
 
 .product-card__img {
@@ -132,6 +164,51 @@
 			color: @red1;
 		}
 	}
+}
+
+.card-horizontal .product-card-item:hover {
+	.product-card__desk p {
+		color: @pr;
+	}
+}
+
+.card-badges {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 5;
+}
+
+.card-badge {
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 22px;
+	line-height: 22px;
+	color: #fff;
+	font-size: 10px;
+	font-family: @rb;
+	display: inline-block;
+	border-radius: 20px;
+	display: block;
+	width: fit-content;
+	pointer-events: none;
+
+	&+.card-badge {
+		margin-top: 15px;
+	}
+
+}
+
+.card-badge--discount {
+	background-color: @ac1;
+}
+
+.card-badge--new {
+	background-color: @green1;
+}
+
+.card-badge--hit {
+	background-color: @ac3;
 }
 
 // ===карточка продукта

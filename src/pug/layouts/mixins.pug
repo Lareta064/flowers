@@ -187,8 +187,13 @@ mixin basketItem(imgSrc, text1, text2, oldPrice)
 							if oldPrice
 								.basket-item__old-price 500 руб
 
-mixin main-product-card(title, imgSrc, weight, price)
+mixin main-product-card(title, imgSrc, weight, price, oldPrice,desk )
 	.product-card-item
+		div(itemscope itemtype="http://schema.org/Product")
+		.card-badges
+			.card-badge.card-badge--discount 12%
+			.card-badge.card-badge--new New
+			.card-badge.card-badge--hit Хит
 		//===== social-icons =====
 		.icon-group
 			a(href="#!")
@@ -202,10 +207,17 @@ mixin main-product-card(title, imgSrc, weight, price)
 		//===== card-body =====
 		a(href="#!").product-card&attributes(attributes)
 			.product-card__img
-				img(src="img/products/"+imgSrc+".jpg" , alt="img" width=""+ weight)
+				img(itemprop="image" src="img/products/"+imgSrc+".jpg" , alt="img" width=""+ weight)
 			.product-card__title
-				h3 !{title}
-				p #{price} руб.
+				h3(itemprop="name") !{title}
+				.price-block
+					p(itemprop="price" content=" "+ price ) #{price} руб.
+					if oldPrice
+						p.oldPrice #{oldPrice} руб.
+				if desk
+					.product-card__desk(itemprop="description")
+						p Cостав:
+						p #{desk}
 
 //оформление заказа таблицы строка
 mixin receivwedTableRow(imgSrc, title, desk, amount)

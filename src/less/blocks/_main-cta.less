@@ -20,12 +20,43 @@
 		background-position: right;
 	}
 
-	@media(max-width:991px) {}
 
-	@media(max-width:767px) {}
+
+	@media(max-width:991px) {
+		height: 665px;
+		background-position: 16% 0;
+
+		.title-row {
+			position: relative;
+			z-index: 3;
+		}
+
+
+		&:after {
+			content: '';
+			position: absolute;
+
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 70%;
+			background-color: rgba(255, 255, 255, .7);
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70%);
+		}
+
+
+	}
+
+	@media(max-width:767px) {
+		background-position: 11% 0;
+
+	}
 
 	.review-slider-wrapper {
 		max-width: 670px;
+		position: relative;
+		z-index: 3;
+
 	}
 
 	.review-slider-item {
@@ -37,11 +68,18 @@
 
 		.rev-bottom {
 			margin-top: 20px;
+
 		}
 	}
 
 	.block-link {
 		margin-top: 40px;
+		position: relative;
+		z-index: 3;
+
+		@media(max-width:991px) {
+			margin-top: 20px;
+		}
 	}
 }
 

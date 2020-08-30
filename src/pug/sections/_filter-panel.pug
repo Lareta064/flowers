@@ -1,39 +1,29 @@
 .filter-panel
 	.filter-panel__block
-		h4 Категории магазина
+		h4 Категории
 		.filter-panel__menu
 			ul
-				li
-					a(href="#!") Овощи
-				li
-					a(href="#!") Фрукты
-				li
-					a(href="#!") Экзотические фрукты
-				li.drop-list.active
-					a(href="#!") Мясо, рыба, птица
-					.menu-drop
-						a(href="#") Мясо
-						a(href="#") Рыба
-						a(href="#") Птица
 				li.drop-list
-					a(href="#!") Вода, напитки, соки
+					a(href="#!") Классические
 					.menu-drop
-						a(href="#") Вода
-						a(href="#") напитки
-						a(href="#") соки
+						a(href="#").active Розы
+						a(href="#") Пионы
+						a(href="#") Тюльпаны
+				li.drop-list
+					a(href="#!") Дизайнерские
+					.menu-drop
+						a(href="#") Розы
+						a(href="#") Пионы
+						a(href="#") Тюльпаны
 				
 				li.drop-list
-					a(href="#!") Орехи и сухофрукты
+					a(href="#!") Цветы в коробке
 					.menu-drop
-						a(href="#") Орехи
-						a(href="#") сухофрукты
-						
+						a(href="#") Розы
+						a(href="#") Пионы
+						a(href="#") Тюльпаны
 				li
-					a(href="#!") Зелень
-				li
-					a(href="#!") Ягоды
-				li
-					a(href="#!") Товары по акции
+					a(href="#!") Корзины цветов
 
 	.filter-panel__block
 		.filter-type
@@ -45,38 +35,91 @@
 					label.basic-text(for="amount_1") до
 					input.price-value#amount_1(type="text" )
 				#slider-range
-		.filter-type
-			h5 Вид мяса
-			.filter-checkbox
-				label(class="form-label")
-					input(class="form-checkbox" type="checkbox" )
-					span.custom-checkbox
-					span Свинина
-				label(class="form-label")
-					input(class="form-checkbox" type="checkbox" )
-					span.custom-checkbox
-					span Говядина
-				label(class="form-label")
-					input(class="form-checkbox" type="checkbox" )
-					span.custom-checkbox
-					span Телятина
-				label(class="form-label")
-					input(class="form-checkbox" type="checkbox" )
-					span.custom-checkbox
-					span Кролик
+		
 		.filter-type
 			h5 Акции
-			.filter-checkbox
-				label(class="form-label")
-					input(class="form-checkbox" type="checkbox" )
-					span.custom-checkbox
-					span Товары по акции
+			.filter-checkbox__group
+				.filter-checkbox
+					label(class="form-label")
+						input(class="form-checkbox" type="checkbox" )
+						span.custom-checkbox
+						span Товары по акции
 		.filter-type
 			h5 Новинки
-			.filter-checkbox
-				label(class="form-label")
-					input(class="form-checkbox" type="checkbox" )
-					span.custom-checkbox
-					span Новые поступления
+			.filter-checkbox__group
+				.filter-checkbox
+					label(class="form-label")
+						input(class="form-checkbox" type="checkbox" )
+						span.custom-checkbox
+						span Новые поступления
+		.filter-type
+			h5 Упаковка
+			.filter-checkbox__group
+				.filter-checkbox
+					label(class="form-label")
+						input(class="form-checkbox" type="checkbox" )
+						span.custom-checkbox
+						span Крафт-бумага
+				.filter-checkbox
+					label(class="form-label")
+						input(class="form-checkbox" type="checkbox" )
+						span.custom-checkbox
+						span Коробка
+				.filter-checkbox
+					label(class="form-label")
+						input(class="form-checkbox" type="checkbox" )
+						span.custom-checkbox
+						span Органза
+				.filter-checkbox
+					label(class="form-label")
+						input(class="form-checkbox" type="checkbox" )
+						span.custom-checkbox
+						span Сетка
+				.filter-checkbox
+					label(class="form-label")
+						input(class="form-checkbox" type="checkbox" )
+						span.custom-checkbox
+						span Фетр
+				.filter-checkbox
+					label(class="form-label")
+						input(class="form-checkbox" type="checkbox" )
+						span.custom-checkbox
+						span Пленка
+		.filter-type
+			h5 Цвет
+			.filter-radio__group
+				.form-group
+					label
+						input(type="radio" id="rad3" name="radio-gr2")
+						.fake-label(style="background: url(img/bg/no-color.png);")
+				.form-group
+					label
+						input(type="radio" id="rad3" name="radio-gr2")
+						.fake-label(style="background-color: red;")
+				.form-group
+					label
+						input(type="radio" id="rad3" name="radio-gr2")
+						.fake-label(style="background-color: green;")
+				.form-group
+					label
+						input(type="radio" id="rad3" name="radio-gr2")
+						.fake-label(style="background-color: yellow;")
+				.form-group
+					label
+						input(type="radio" id="rad3" name="radio-gr2")
+						.fake-label(style="background-color: blue;")
+				.form-group
+					label
+						input(type="radio" id="rad3" name="radio-gr2")
+						.fake-label(style="background-color: pink;")
+				.form-group
+					label
+						input(type="radio" id="rad3" name="radio-gr2")
+						.fake-label(style="background-color: orange;")
+				.form-group
+					label
+						input(type="radio" id="rad3" name="radio-gr2")
+						.fake-label(style="background-color: purple;")
+		
 		.filter-button
 			button.page-button.page-button--red Сбросить 
