@@ -10,7 +10,7 @@ section.contacts.pt-30
 			.row
 				.col-md-6.col-lg-7
 					.feedback-form
-						h2.title-2 Обратная связь						
+						h2.page-title Обратная связь						
 						form(action="").contact-form
 							.form-block.d-flex
 								.form-group
@@ -32,20 +32,27 @@ section.contacts.pt-30
 									span.custom-checkbox
 									| Принимаю  #[a(href="#") условия обработки] моих данных.
 							.form-group
-								input.page-btn2(type="submit" value="Отправить")
+								input.page-btn.page-btn--red(type="submit" value="Отправить")
 						#answer
 				.col-md-5.col-lg-4.offset-md-1
 					.address-block
-						h2.title-2 Контакты
-						.address-block__item
-							span Адрес:
-							span г.Москва, ул.Северянинский проезд д. 9 стр. 1
+						h2.page-title Контакты
+						.contacts-info.title-3
+							p Круглосуточная поддержка клиентов и оформления заказа:
+								a(href="tel:+74998416793" itemprop="telephone") +7 499 841-67-93
+								a(href="tel:+74998416793" itemprop="telephone") +7 977 675-66-30.
+						.address-block
+							.address-block__item(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+								p Адрес:
+								p
+									span(itemprop="addressLocality")  г.Москва, 
+									span(itemprop="streetAddress") ул. Королева, 12 
 						.address-block__item
 							span Время работы:								
 							span СР,ЧТ, ВС  с 15:00 - 00:00;   ПТ, СБ с 15:00 - 02:00;   ПН, ВТ - выходные дни
 						.address-block__item
 							span Телефон:
-							a(href="tel:+79055555555") + 7 (905) 555-55-55
+							a(href="tel:+79055555555" itemprop="telephone") + 7 (905) 555-55-55
 						.address-block__item
 							span Email:
-							a(href="mailto:info@mail.ru") info@mail.ru
+							a(href="mailto:info@mail.ru" itemprop="email") info@mail.ru

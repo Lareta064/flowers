@@ -313,20 +313,22 @@ $(document).ready(function () {
 		})
 	}
 	// для текстареа активируем и деактивируем кастомный плейсхолдер при фокусе и блюре
-	textareaElement.addEventListener('focus', function () {
-		const thisParent = this.closest('.form-group');
-		thisParent.querySelector('.fake-placeholder').classList.add('active');
-
-	});
-	textareaElement.addEventListener('blur', function () {
-		const thisParent = this.closest('.form-group');
-		if (this.value.length == '0') {
-			thisParent.querySelector('.fake-placeholder').classList.remove('active');
-
-		}
-	});
+	if (textareaElement) {
+		textareaElement.addEventListener('focus', function () {
+			const thisParent = this.closest('.form-group');
+			thisParent.querySelector('.fake-placeholder').classList.add('active');
+		});
 
 
+		textareaElement.addEventListener('blur', function () {
+			const thisParent = this.closest('.form-group');
+			if (this.value.length == '0') {
+				thisParent.querySelector('.fake-placeholder').classList.remove('active');
+
+			}
+		});
+
+	}
 
 	/*ВАЛИДАЦИЯ ФОРМЫ */
 	$("#contact-form").on('submit', function (event) {
