@@ -1,11 +1,11 @@
 /*ДОСТАВКА  И ОПЛАТА*/
 .delivery {
 	.border-block {
-		margin-bottom: 40px;
+		margin-bottom: 48px;
 
 		p,
 		h3 {
-			color: @red;
+			color: @ac1;
 		}
 	}
 }
@@ -16,7 +16,7 @@
 }
 
 .text-block {
-	margin-bottom: 15px;
+	margin-bottom: 39px;
 }
 
 .text-block p {
@@ -43,8 +43,8 @@
 	}
 }
 
-.delivery-info {
-	padding-left: 34px;
+.address-info {
+	padding-left: 28px;
 	border-left: 4px solid @ac4;
 
 	height: 100%;
@@ -57,9 +57,41 @@
 		padding-left: 18px;
 		padding-top: 30px;
 	}
+
+	h5 {
+		font-size: 18px;
+		line-height: 15px;
+		font-family: @rb;
+		margin-bottom: 17px;
+		color: @pr;
+	}
 }
 
-.delivery-info .title-3 {
+.contacts .address-info h5 {
+	margin-bottom: 14px;
+	color: @ac1;
+}
+
+.contacts .address-info .text-bold {
+	margin-bottom: 37px;
+}
+
+.address-info .text-bold {
+	.title-3;
+	margin-bottom: 48px;
+
+	a {
+		display: block;
+		color: @pr;
+		.tr;
+
+		&:hover {
+			color: @red;
+		}
+	}
+}
+
+.address-info .title-3 {
 	margin-bottom: 30px;
 
 	a {
@@ -73,22 +105,27 @@
 	}
 }
 
+.contacts .work-time_item {
+	margin-top: 35px;
+}
+
 .work-time_item {
 	margin-top: 40px;
 
-	span {
-		display: block;
+	li {
+
 		margin-bottom: 10px;
 	}
 
-	span:first-child {
-		font-weight: 700;
+	li span {
+		font-family: @rb;
 	}
 }
 
 .payment-type {
 	display: flex;
 	align-items: center;
+	margin-top: 16px;
 
 	@media(max-width:767px) {
 		display: block;
@@ -105,8 +142,10 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	position: relative;
+	top: -5px;
 
 	img+img {
-		margin-left: 20px;
+		margin-left: 17px;
 	}
 }

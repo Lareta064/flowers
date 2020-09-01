@@ -205,9 +205,9 @@ mixin main-product-card(title, imgSrc, weight, price, oldPrice,desk )
 		//===== badges =====
 		
 		//===== card-body =====
-		a(href="#!").product-card&attributes(attributes)
+		a(href="product-card.html").product-card&attributes(attributes)
 			.product-card__img
-				img(itemprop="image" src="img/products/"+imgSrc+".jpg" , alt="img" width=""+ weight)
+				img(itemprop="image" src="img/products/"+imgSrc+".jpg"  srcset="img/products/"+imgSrc+".jpg 2x" alt="img" width=""+ weight)
 			.product-card__title
 				h3(itemprop="name") !{title}
 				.price-block

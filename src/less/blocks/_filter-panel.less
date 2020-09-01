@@ -283,7 +283,7 @@ li.drop-list.active:after {
 	}
 }
 
-.filter-type .filter-radio__group {
+.color-filter {
 	display: flex;
 
 	flex-wrap: wrap;
@@ -307,7 +307,7 @@ li.drop-list.active:after {
 	}
 }
 
-.filter-type .fake-label {
+.color-filter .fake-label {
 	position: absolute;
 	top: 0;
 	width: 22px;
@@ -316,7 +316,7 @@ li.drop-list.active:after {
 
 }
 
-.filter-type .form-group:first-child input[type="radio"]:checked+.fake-label {
+.color-filter.filter-panel--color .form-group:first-child input[type="radio"]:checked+.fake-label {
 	&:after {
 		display: none;
 	}
@@ -325,7 +325,7 @@ li.drop-list.active:after {
 	// border: 3px solid #000;
 }
 
-.filter-type input[type="radio"]:checked+.fake-label {
+.color-filter input[type="radio"]:checked+.fake-label {
 	&:after {
 		content: '';
 		width: 19px;
