@@ -1,0 +1,136 @@
+.review-block__wrapper.review-block
+	.review-item
+		.review-author
+			.author-avatar
+				img(src="img/main/review/rev1.jpg", alt="review")
+			.rev-info
+				p Дмитрий
+				p 16.04.2020
+		
+		.review-text
+			.rating-block
+				.rating-block-icons
+					span.rating-val
+						+star
+					span.rating-val
+						+star
+					span.rating-val
+						+star
+					span
+						+star
+					span
+						+star
+			p Таким образом консультация с широким активом представляет собой интересный эксперимент проверки систем массового участия. Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что реализация намеченных плановых
+		.review-foto
+			img(src="img/review/rev1-foto.jpg" srcset="img/review/rev1-foto.jpg 2x", width="132" alt="photo")
+	.review-item
+		.review-author
+			.author-avatar
+				img(src="img/main/review/rev2.jpg", alt="review")
+			.rev-info
+				p Наталья
+				p 15.04.2020
+		
+		.review-text
+			.rating-block
+				.rating-block-icons
+					span.rating-val
+						+star
+					span.rating-val
+						+star
+					span.rating-val
+						+star
+					span
+						+star
+					span
+						+star
+			p Таким образом консультация с широким активом представляет собой интересный эксперимент проверки систем массового участия. Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что реализация намеченных плановых
+		.review-foto
+			img(src="img/review/rev2-foto.jpg" srcset="img/review/rev2-foto.jpg 2x", width="132" alt="photo")
+	.review-item
+		.review-author
+			.author-avatar
+				img(src="img/main/review/rev3.jpg", alt="review")
+			.rev-info
+				p Ирина
+				p 12.04.2020
+		
+		.review-text
+			.rating-block
+				.rating-block-icons
+					span.rating-val
+						+star
+					span.rating-val
+						+star
+					span.rating-val
+						+star
+					span
+						+star
+					span
+						+star
+			p Таким образом консультация с широким активом представляет собой интересный эксперимент проверки систем массового участия. Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что реализация намеченных плановых
+		.review-foto
+			img(src="img/review/rev3-foto.jpg" srcset="img/review/rev3-foto.jpg 2x", width="132" alt="photo")
+
+// ============ ПАГИНАЦИЯ =============
+.pagination-wrapper.mt-30
+	.pagination-block
+		button
+			span
+				svg(width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+					path(d="M4.95294 7.5L1 4.01759L5 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round") 
+					path(d="M7.95294 7.5L4 4.01759L8 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round") 
+		button
+			span
+				svg(width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+					path(d="M4.95294 7.5L1 4.01759L5 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
+		button.active 1
+		button 2
+		button 3
+		button ...
+		button 6
+		button
+			span
+				svg(width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+					path(d="M1.04706 7.5L5 4.01759L1 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
+		button
+			span
+				svg(width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+					path(d="M4.04706 7.5L8 4.01759L4 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
+					path(d="M1.04706 7.5L5 4.01759L1 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
+
+//============ ФОРМА ДЛЯ ОТЗЫВА =============
+.review-form-wrapper
+	form
+		.form-block
+			.row
+				.col-md-3.col-xl-2
+					.choose-avatar
+						.user-avatar(style="background-image:  url(img/main/review/nofoto.jpg)")
+						.choose-avatar__col
+							input(type="file" id="file" data-multiple-caption="{count} файлов выбрано" multiple class="inputfile")
+							label.avatar-label(for="file")
+								span Загрузить фото
+				.col-md-4.offset-md-1.offset-xl-0.col-xl-5
+					.form-group
+						input(type="text" name="userName" )
+						span.fake-placeholder Имя #[span *]
+						span.error-notify
+						span.error-text Имя
+				.col-md-4.col-xl-5
+					.form-group 
+						input(type="text" name="userEmail"  )
+						span.fake-placeholder Email (не публикуется) #[span *]
+						span.error-notify
+						span.error-text Введите email
+				.col-12
+					.form-group
+						textarea(type="text" name="message"  )
+						span.fake-placeholder Text #[span *]
+				.col-12
+					.form-footer-block
+						button.page-button.page-button--red.h-40 Оставить отзыв
+						.add-foto-block
+							p Загрузить фото букета
+							span
+								+link-icon

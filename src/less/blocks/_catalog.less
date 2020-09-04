@@ -300,6 +300,29 @@ button.view-list.active i {
 	}
 }
 
+.form-select.form-select-light {
+	input {
+		border: 1px solid #E8E9EA;
+		color: #E8E9EA;
+
+		&::placeholder {
+			color: @pr;
+		}
+	}
+
+
+	.form-select__icon {
+		color: @pr;
+		border: 1px solid #E8E9EA;
+		border-radius: 0 40px 40px 0;
+	}
+
+	.form-select__options {
+		border: 1px solid #E8E9EA;
+	}
+
+}
+
 .form-select__options.active {
 	display: block;
 }
@@ -325,6 +348,8 @@ button.view-list.active i {
 
 	i {
 		transition: .5s;
+		position: relative;
+		top: 2px;
 	}
 
 

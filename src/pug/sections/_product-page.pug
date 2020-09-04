@@ -5,166 +5,203 @@ section.product-page.pt-30
 			.brcrumg-item
 				a(href="index.html") Главная
 			.brcrumg-item
-				a(href="") Страница товара
-		h1.page-title Шелковица Армения
+				a(href="index.html") Каталог
+			.brcrumg-item
+				a(href="index.html") Классические
+			.brcrumg-item
+				a(href="") Букет "Эльвира"
+		h1.page-title Букет "Эльвира"
 		.product-page__content
 			.row
 				.col-lg-5
-					.fotorama.fotorama--product(data-nav="thumbs")
-						a(href="img/main/fotorama/1.jpg")
-							img(src="img/main/fotorama/thumb1.jpg" width='160' height="115")
-						a(href="img/main/fotorama/1.jpg")
-							img(src="img/main/fotorama/thumb1.jpg" width='160' height="115")
-						a(href="img/main/fotorama/1.jpg")
-							img(src="img/main/fotorama/thumb1.jpg" width='160' height="115")
-						a(href="img/main/fotorama/1.jpg")
-							img(src="img/main/fotorama/thumb1.jpg" width='160' height="115")
+					.fotorama-wrapper
+						.fotorama.fotorama--product(data-nav="thumbs" data-thumbmargin='20'  data-thumbwidth="132" data-thumbheight="94")
+							a(href="img/products/elvira.jpg" data-srcset='img/products/elvira@2x.jpg 2x')
+								img(src="img/products/elvira-mini1.jpg" width='132' height="94")
+							a(href="img/products/elvira.jpg")
+								img(src="img/products/elvira-mini2.jpg" width='132' height="94")
+							a(href="img/products/elvira.jpg")
+								img(src="img/products/elvira-mini3.jpg" width='132' height="94")
+							a(href="img/products/elvira.jpg")
+								img(src="img/products/elvira-mini2.jpg" width='132' height="94")
+							a(href="img/products/elvira.jpg")
+								img(src="img/products/elvira-mini3.jpg" width='132' height="94")
+						
 				.col-lg-7
 					.product-set
 						.product-set__row
-							.text-16.ingredients
-								p Урожай 2020 года
+							.rating-block
+								.rating-block-icons
+									span.rating-val
+										+star
+									span.rating-val
+										+star
+									span.rating-val
+										+star
+									span
+										+star
+									span
+										+star
+								.rating-block-text
+									p Отзывы (3)
 							
-							.text-16--light
-								p Вес: 500гр
-
-						.product-set__row.product-set__row-wrap
-							.product-card__filters
-								.text-16
-									p Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат. Шелковица в зависимости от сорта может по цвету варьироваться от красного до темно-фиолетового почти черного и от белого до розового. Шелковичное дерево плодоносит ежегодно и очень обильно. Урожай одного дерева может составлять более 200 кг. Первые плоды начинают зреть в середине июля. Основной период созревания приходит на конец июля начало августа.
-						.product-set__row.product-set__column
-							.text-16--bold.mb-19 Дополнительно:
-							.product-set__types.d-flex
+							
+							a(href="#").upper-link оставить отзыв
+						.product-set__price
+							+priceBlock(3500, 5500)(class=" price-block--big")
+						.product-set__text.text-14
+							p Упаковка и оформление букета может отличаться от представленного на фото. Уточните все детали у наших флористов.
+								
+						.product-set__filter.product-set__filter-center
+							.filter-col.filter-col--left
+								h5 Упаковка:
+								
 								.products-optional__List
 									.form-group
 										input(type="radio" id="op1" name='optional' )
 										label(for="op1")
-											span Стандартная упаковка
+											span Стандартная
+												span.red-text (бесплатно)
 									.form-group
 										input(type="radio" id="op2" name='optional' )
 										label(for="op2")
-											span Упаковка с дополнительными хладагентами + 300 руб.
+											span Крафт
+												span.red-text (+390р)
 									.form-group
 										input(type="radio" id="op3" name='optional' )
 										label(for="op3")
-											span Жесткая упаковка в деревянные коробки + 150 руб.
+											span Корейка
+												span.red-text (+390р)
+									.form-group
+										input(type="radio" id="op4" name='optional' )
+										label(for="op4")
+											span Преимум
+												span.red-text (+390р)
+									.form-group
+										input(type="radio" id="op5" name='optional' )
+										label(for="op5")
+											span Корзинка
+												span.red-text (+390р)
+								
+							.filter-col.filter-col--large
+								h5 Дополнительно:
+								.filter-panel.filter-checkbox__group
+									.filter-checkbox
+										label(class="form-label")
+											input(class="form-checkbox" type="checkbox" )
+											span.custom-checkbox
+											span Средство для стойкости цветов
+												span.red-text (+0 руб.)
+									.filter-checkbox
+										label(class="form-label")
+											input(class="form-checkbox" type="checkbox" )
+											span.custom-checkbox
+											span Конверт с запиской
+												span.red-text (+0 руб.)
+								
+							.filter-col.filter-col--right
+								h5 Основной цвет
+								.color-filter.filter-panel--color
+									.form-group
+										label
+											input(type="radio" id="rad3" name="radio-gr2")
+											.fake-label(style="background-color: blue;")
+									.form-group
+										label
+											input(type="radio" id="rad3" name="radio-gr2")
+											.fake-label(style="background-color: red;")
+									.form-group
+										label
+											input(type="radio" id="rad3" name="radio-gr2")
+											.fake-label(style="background-color: green;")
+									.form-group
+										label
+											input(type="radio" id="rad3" name="radio-gr2")
+											.fake-label(style="background-color: red;")
+									.form-group
+										label
+											input(type="radio" id="rad3" name="radio-gr2")
+											.fake-label(style="background-color: green;")
+									
+						.product-set__filter.product-set__filter--col
+							.filter-col
+								.filter-col-item
+									h5 Размер букета
+									.filter-select.form-select.form-select-light
+										.form-select__icon
+											i.fas.fa-angle-down
+										input(type="text" name="city" placeholder="Стандартный (как на фото)" autocomplete="off")
+										ul.form-select__options
+											li.active Стандартный (как на фото)
+											li Самые дешевые
+											li Популярные
+											li В наличии
+							.filter-col
+								.filter-col-item
+									h5.mb-21 Высота стебля:
+									.radio-block-horizontal
+										.form-group
+											input(type="radio" id="size-1" name='optional2' )
+											label(for="size-1")
+												span 60
+													
+										.form-group
+											input(type="radio" id="size-2" name='optional2' )
+											label(for="size-2")
+												span 70
+										.form-group
+											input(type="radio" id="size-3" name='optional2' )
+											label(for="size-3")
+												span 80
+													
+										.form-group
+											input(type="radio" id="size-4" name='optional2' )
+											label(for="size-4")
+												span 90
+										.form-group
+											input(type="radio" id="size-5" name='optional2' )
+											label(for="size-5")
+												span 100
+									
+
 						.product-set__footer
 							.total-amount
-								div.d-flex
-									span.title-16--bold Количество:
+								div.d-flex.counter-block
+									span Количество:
 									+counter 
-									.basket-item__cost
-										.basket-item__cost-val.title-34 350
-										.basket-item__cost-dim руб
-								button.page-button.page-button--red В корзину
+									
+								.buttons-group
+									button.favorite-icon
+										i.far.fa-heart
+									button.h-40.page-button.page-button--light Купить в 1 клик
+									button.h-40.page-button.page-button--red В корзину
 
 // // ============ ОТЗЫВЫ =============
-section.review-block
+.tabs-block
 	.container
-		h4.title-4 Отзывы(3)
-		.review-block__wrapper
-			.review-item
-				.review-author
-					.author-avatar
-						img(src="img/main/review/rev1.jpg", alt="review")
-					p Дмитрий
-					p 16.04.2020
-				
-				.review-text
-					p Таким образом консультация с широким активом представляет собой интересный эксперимент проверки систем массового участия. Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет выполнять важные задания по разработке модели развития. Не следует, однако забывать, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке направлений прогрессивного развития. Идейные соображения высшего порядка, а также консультация с широким активом требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям.
-			.review-item
-				.review-author
-					.author-avatar
-						img(src="img/main/review/rev2.jpg", alt="review")
-					p Наталья
-					p 15.04.2020
-				
-				.review-text
-					p Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
-			.review-item
-				.review-author
-					.author-avatar
-						img(src="img/main/review/rev3.jpg", alt="review")
-					p Ирина
-					p 12.04.2020
-				
-				.review-text
-					p Задача организации, в особенности же новая модель организационной деятельности в значительной степени обуславливает создание новых предложений. Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Товарищи! начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
-		
-		// ============ ПАГИНАЦИЯ =============
-		.pagination-wrapper
-			.pagination-block
-				button
-					span
-						svg(width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-							path(d="M4.95294 7.5L1 4.01759L5 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round") 
-							path(d="M7.95294 7.5L4 4.01759L8 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round") 
-				button
-					span
-						svg(width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-							path(d="M4.95294 7.5L1 4.01759L5 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
-				button.active 1
-				button 2
-				button 3
-				button ...
-				button 6
-				button
-					span
-						svg(width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-							path(d="M1.04706 7.5L5 4.01759L1 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
-				button
-					span
-						svg(width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg")
-							path(d="M4.04706 7.5L8 4.01759L4 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
-							path(d="M1.04706 7.5L5 4.01759L1 0.5" stroke="#BFBFBF" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round")
-
-		//============ ФОРМА ДЛЯ ОТЗЫВА =============
-		.review-form-wrapper
-			form
-				.form-block
-					.row
-						.col-md-3.col-xl-2
-							.choose-avatar
-								.user-avatar(style="background-image:  url(img/main/review/nofoto.jpg)")
-								.choose-avatar__col
-									input(type="file" id="file" data-multiple-caption="{count} файлов выбрано" multiple class="inputfile")
-									label.avatar-label(for="file")
-										span Загрузить фото
-						.col-md-4.offset-md-1.offset-xl-0.col-xl-5
-							.form-group
-								input(type="text" name="userName" )
-								span.fake-placeholder Имя #[span *]
-								span.error-notify
-								span.error-text Имя
-						.col-md-4.col-xl-5
-							.form-group 
-								input(type="text" name="userEmail"  )
-								span.fake-placeholder Email (не публикуется) #[span *]
-								span.error-notify
-								span.error-text Введите email
-						.col-12
-							.form-group
-								textarea(type="text" name="message"  )
-								span.fake-placeholder Text #[span *]
-						.col-12
-							button.page-button.page-button--color Оставить отзыв
-						
+		include _tabs-product-page.pug
 		//============ ПОХОЖИЕ ТОВАРЫ =============				
 section.other-products
 	.container
-		.title-group
-			h4.title-4 Похожие товары
-		.menu-products__content
-			.row
-				.col-md-6.col-xl-4
-					+main-product-card('Шелковица Армения', 'product1', 500, 'Урожай 2020 года', 630)
-				.col-md-6.col-xl-4
-					+main-product-card('Крыжовник Россия', 'product2', 500, 'Урожай 2020 года', 500, 800)
-				.col-md-6.col-xl-4
-					+main-product-card('Арбуз нарезанный Иран', 'product3', 450, 'Урожай 2020 года', 350)
-				.col-md-6.col-xl-4
-					+main-product-card('Баклажаны', 'product4', 500, 'Урожай 2020 года', 630)
-				.col-md-6.col-xl-4
-					+main-product-card('Evian минеральная 24 штук по 0.5 л', 'product5', 650, 'Урожай 2020 года', 700)
-				.col-md-6.col-xl-4
-					+main-product-card(' Говядина на костях', 'product6', 650, ' Фермерское мясо', 700)
+		.other-products__content
+			.title-row
+				h2.block-title Популярные предложения:
+				// ===== стрелки слайдера
+				.popular-arrows.slider-arrows
+					.ar-next#popular-next
+						+left-arrow
+					.ar-prev#popular-prev
+						+right-arrow
+			.popular-slider.owl-carousel
+				.product-slider__item
+					+main-product-card('Букет “Миранда”', 'popular1', 270,  4890)
+				.product-slider__item
+					+main-product-card('Букет “Поулина”', 'popular2', 270,  4500)
+				.product-slider__item
+					+main-product-card('Букет “Свежесть”', 'popular3', 270,  5000)
+				.product-slider__item
+					+main-product-card('Букет “Торонто”', 'popular4', 270,  4250)
+				.product-slider__item
+					+main-product-card('Букет “Миранда”', 'popular1', 270,  4890)
+				.product-slider__item
+					+main-product-card('Букет “Поулина”', 'popular2', 270,  4500)

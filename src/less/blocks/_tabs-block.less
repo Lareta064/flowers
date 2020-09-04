@@ -1,0 +1,71 @@
+.desk-footer {
+	margin-top: 30px;
+}
+
+.head-4 {
+	font-size: 18px;
+	line-height: 25px;
+	font-family: @rb;
+	text-transform: none;
+}
+
+.list-block {
+	.head-4 {
+		margin-bottom: 20px;
+	}
+
+	.marker-list li+li {
+		margin-top: 10px;
+	}
+}
+
+.delivery-list__item {
+	margin-top: 30px;
+
+
+}
+
+.product-page__tabs {
+	.nav-tabs .head-4 {
+		color: #8f8f8f;
+		padding-bottom: 4px;
+		border-bottom: 4px solid transparent;
+
+		&+.head-4 {
+			margin-left: 20px;
+		}
+
+		&.active {
+			border-color: @ac1;
+			color: @pr;
+		}
+	}
+
+	.tab-content {
+		padding-top: 30px;
+		border-top: 1px solid @sec1;
+
+	}
+}
+
+.product-page__tabs #nav-tab {
+	white-space: nowrap;
+	overflow-x: auto;
+	width: auto;
+	flex-wrap: nowrap;
+
+	&::-webkit-scrollbar {
+		display: none;
+		height: 0;
+		background-color: transparent;
+	}
+
+}
+
+.tabs-block {
+	padding-bottom: 20px;
+}
+
+#payment-tab .payment-type {
+	margin-top: 30px;
+}

@@ -16,6 +16,14 @@
 		&+.review-item {
 			margin-top: 30px;
 		}
+
+		.rating-block {
+			margin-bottom: 11px;
+		}
+
+		@media(max-width:767px) {
+			display: block;
+		}
 	}
 
 	h4 {
@@ -25,6 +33,21 @@
 
 	.review-author {
 		margin-right: 30px;
+
+		@media(max-width:767px) {
+			display: flex;
+			margin-bottom: 11px;
+
+			.author-avatar {
+				margin-right: 30px;
+			}
+
+			.rev-info {
+				text-align: left;
+			}
+
+
+		}
 
 		.author-avatar {
 			width: 48px;
@@ -44,7 +67,25 @@
 
 	.review-text {
 		font-size: 14px;
-		line-height: 22px;
+		line-height: 24px;
+	}
+
+	.review-foto {
+		margin-left: 30px;
+		max-width: 132px;
+		min-width: 13%;
+		overflow: hidden;
+		max-width: 132px;
+
+		img {
+			border-radius: 10px;
+		}
+
+		@media(max-width:767px) {
+			margin-top: 11px;
+			margin-left: auto;
+		}
+
 	}
 
 	.pagination-wrapper {
@@ -104,4 +145,47 @@
 .panel.panel-footer {
 	padding-top: 40px;
 	padding-bottom: 40px;
+}
+
+.add-foto-block {
+	display: flex;
+	align-items: center;
+}
+
+.form-footer-block {
+	display: flex;
+	align-items: center;
+
+	@media(max-width:500px) {
+		display: block;
+	}
+}
+
+.add-foto-block {
+
+	cursor: pointer;
+	padding-left: 30px;
+
+	p {
+		padding-right: 10px;
+		font-size: 13px;
+		color: @pr2;
+		font-family: @rb;
+		.tr;
+	}
+
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&:hover p {
+		color: @ac1;
+	}
+
+	@media(max-width:500px) {
+		padding-left: 0;
+		margin-top: 20px;
+	}
 }

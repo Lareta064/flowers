@@ -138,25 +138,31 @@ input:-webkit-autofill {
 
 .custom-checkbox {
 	display: inline-block;
-	width: 15px;
-	height: 15px;
-	background: #EEEEEE;
-	box-shadow: 0px 0px 1px rgba(31, 31, 31, 0.35);
-	border-radius: 4px;
-	border: 1px solid #939393;
+	width: 14px;
+	height: 14px;
+	background: #fff;
+	// box-shadow: 0px 0px 1px rgba(31, 31, 31, 0.35);
+	border-radius: 2px;
 
+	border: 1px solid #E8E9EA;
+	box-sizing: border-box;
+	border-radius: 2px;
 	background-image: url(../img/main/icons/check.png);
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center -15px;
 	transition: 0.3s ease-out;
-	margin-right: 10px;
+	margin-right: 5px;
 
 }
 
 .form-checkbox:checked+.custom-checkbox {
 	background-position: center;
 
+}
+
+.form-checkbox:checked+.custom-checkbox+span {
+	color: @pr;
 }
 
 .feedback-form .custom-checkbox {
@@ -296,9 +302,9 @@ form .agree-text {
 	content: '';
 	position: absolute;
 	left: 0;
-	top: 0;
-	width: 16px;
-	height: 16px;
+	top: 2px;
+	width: 14px;
+	height: 14px;
 	border: 1px solid @green;
 	border-radius: 100%;
 	background: #fff;
@@ -314,12 +320,12 @@ form .agree-text {
 [type="radio"]:checked+label:after,
 [type="radio"]:not(:checked)+label:after {
 	content: '';
-	width: 8px;
-	height: 8px;
+	width: 6px;
+	height: 6px;
 	background: @green;
 
 	position: absolute;
-	top: 4px;
+	top: 6px;
 	left: 4px;
 	border-radius: 100%;
 	-webkit-transition: all 0.2s ease;

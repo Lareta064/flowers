@@ -54,46 +54,6 @@ $(document).ready(function () {
 
 		})
 	}
-	//  Показать панель категорий
-	// if (window.innerWidth > 1199) {
-	// 	for (let item of mobMenuItem) {
-	// 		if (item == menuCatLink) {
-	// 			item.addEventListener('mouseenter', function () {
-	// 				catPanel.classList.add('active');
-	// 			});
-	// 		} else {
-	// 			item.addEventListener('mouseenter', function () {
-	// 				catPanel.classList.remove('active');
-	// 			});
-	// 		}
-	// 	}
-	// }
-	// скрыть панель категорий, при уводе с нее мышки
-	// catPanel.addEventListener('mouseleave', function () {
-	// 	this.classList.remove('active');
-	// });
-	//отменить наведение на пункт меню "Каталог" при прокрутке страницы
-	// const headerTop = document.getElementById('header-top');
-	// const menuLiCatalog = document.querySelector('li[data-role ="show-catalog"]');
-
-	// window.addEventListener('scroll', function () {
-
-	// 	if (window.pageYOffset > 0) {
-	// 		console.log(window.pageYOffset);
-	// 		console.log(headerTop.classList);
-	// 		headerTop.classList.add('fixed');
-	// 	} else {
-	// 		headerTop.classList.remove('fixed');
-	// 	}
-	// 	if (menuLiCatalog) {
-	// 		if (window.pageYOffset > 10) {
-	// 			menuLiCatalog.removeAttribute('id');
-	// 			catPanel.classList.remove('active');
-	// 		} else {
-	// 			menuLiCatalog.setAttribute('id', 'catPanelItem');
-	// 		}
-	// 	}
-	// });
 
 	// слайдер Новые предложения на главной
 	let productSlider = $('.product-slider');

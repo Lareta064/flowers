@@ -1,0 +1,65 @@
+.product-page__tabs
+	nav
+		#nav-tab.nav.nav-tabs(role="tablist")
+			a#product-desk-tab.nav-item.head-4.active(data-toggle="tab" href="#product-desk" role="tab" aria-controls="product-desk" aria-selected="true") Описание
+			
+			a#nav-delivery-tab.nav-item.head-4(data-toggle="tab" href="#delivery" role="tab" aria-controls="delivery" aria-selected="false") Доставка
+
+			a#nav-payment-tab.nav-item.head-4(data-toggle="tab" href="#payment-tab" role="tab" aria-controls="payment-tab" aria-selected="false") Оплата
+			
+			a#nav-review-tab.nav-item.head-4(data-toggle="tab" href="#review-tab" role="tab" aria-controls="review-tab" aria-selected="false") Отзывы (3)
+			
+		#nav-tabContent.tab-content
+			//  ============ ЛИЧНЫЕ ДАННЫЕ ============
+			#product-desk.tab-pane.fade.show.active(role="tabpanel" aria-labelledby="product-desk-tab")
+				.desk-head
+					h5.head-5 Состав
+					.text-14.mt-10
+						p Калла - 3 шт. ; Роза - 11 шт. ; Альстромерия - 5 шт.; Гиперикум - 5 шт. ; Солидаго - 3 шт. ; Писташ ; Упаковка ( фетр, пленка цветная, лента)
+				.desk-footer.text-14
+					p Букет, в котором собраны все краски весны. Нежный, стильный и неотразимый подарок для близких и любимых людей. Он станет предвестником радостных перемен и настоящего счастья. От такого подарка в восторге будут все окружающие. Милые, романтичные и трогательные цветы сохранят в душе любовь и нежность надолго.
+				
+			
+			// ============ ИСТОРИЯ ЗАКАЗОВ ============
+			#delivery.tab-pane.fade(role="tabpanel" aria-labelledby="delivery-tab")
+				.text-14
+					p Доставка производится собственной курьерской службой ежедневно, с 9:00 до 23:00.
+				.delivery-list
+					.delivery-list__item.list-block
+						h4.head-4 По Москве в пределах МКАД
+						.marker-list
+							ul
+								li При заказе до 5000 рублей - #[span.bold-text 399 руб.]
+								li При заказе от 5000 рублей - #[span.bold-text Бесплатно]
+					.delivery-list__item
+						h4.head-4 По Москве, за МКАД и по Московской области 
+						.marker-list
+							ul
+								li до 10 км - #[span.bold-text 449 руб.]
+					.delivery-list__item
+						h4.head-4 Оформить заказ цветов в Москве и Московской области Вы можете 
+						.marker-list
+							ul
+								li На сайте - в любое время
+								li По телефону, в онлайн-чате или по почте - #[span.bold-text с 9:00 до 21:00]
+
+								
+			#payment-tab.tab-pane.fade(role="tabpanel" aria-labelledby="payment-tab")
+				.list-block
+						h4.head-4 Вы можете оплатить ваш заказ одним из следующих способов:
+						.marker-list
+							ul
+								li Карты Visa, MasterCard и «Мир»
+								li Платежные системы Киви и Яндекс
+								li Расчетный счет (Только для юридических лиц)
+						.payment-type
+							.payment-type__logo.ml-0
+								img(src="img/payment/logo-mir.png", alt="img" width="56")
+								img(src="img/payment/logo-qiwi-koshelek.png", alt="img" width="56")
+								img(src="img/payment/logo-visa.png", alt="img" width="56")
+								img(src="img/payment/logo-yandex-money.png", alt="img" width="56")
+								img(src="img/payment/logo-mastercard.png", alt="img" width="26")
+				
+			#review-tab.tab-pane.fade(role="tabpanel" aria-labelledby="review-tab")
+				include _tab-revew.pug
+				
