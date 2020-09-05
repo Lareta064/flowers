@@ -151,6 +151,11 @@
 	line-height: 1.4;
 	font-family: @rb;
 	color: @ac1;
+	white-space: nowrap;
+
+	@media(max-width:991px) {
+		font-size: 18px;
+	}
 }
 
 .basket-item-col--right {
@@ -310,6 +315,13 @@
 	.basket-item-top {
 		display: flex;
 		margin-bottom: 15px;
+		position: relative;
+
+		.remove-btn {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
 
 		.basket-item__img {
 			width: 101px;

@@ -1,41 +1,41 @@
 
-section.order-receiver
-	.brcrumg
+section.order-receiver.pt-30
+	.container
+		.brcrumg
 			.brcrumg-item
 				a(href="index.html") Главная
 			.brcrumg-item
 				a(href="") Подтверждение заказа
-	.container
 		h1.page-title Оформление заказа
 		p.title-light Ваш заказ получен
 		.order-table
 			.table-row.table-row--head
 				.row
-					.col-md-2
-						.table-cell.table-cell__img
-					.col-md-6
+					.col-md-8.col-lg-7.col-xl-6
 						.table-cell.table-cell__deskrip
 							h5 Наименование
-					.col-md-2
+					.col-md-2.col-xl-4
 						.table-cell.table-cell__count
 							h5 Количество
-					.col-md-2
+					.col-md-2.col-lg-2.offset-xl-1.col-xl-1
 						.table-cell.table-cell__amount
 							h5 Стоимость
-			+receivwedTableRow('product1', '"Шелковица Армения"', 'Урожай 2020 года. Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.', '650')
-			+receivwedTableRow('product2', 'Крыжовник Россия', 'Урожай 2020 года. Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.', '350')
-			+receivwedTableRow('product3','Крыжовник Россия', 'Урожай 2020 года. Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.', '450')
+			.basket-table
+				+recivedBasketItem('background-image: url(img/products/elvira.jpg)', 'Букет "Миранда"', 2390)
+				+recivedBasketItem('background-image: url(img/products/new1.jpg)', 'Букет "Миранда"', 2390)
+				+recivedBasketItem('background-image: url(img/products/new2.jpg)', 'Букет "Миранда"', 2390)
+				+recivedBasketItem('background-image: url(img/products/new3.jpg)', 'Букет "Миранда"', 2390)
 			
-			.table-row.table-row__result
+			.table-row.table-row__result.title-3
 				p Итого, сумма заказа с доставкой:
-				.total-amount.title-34
+				.total-amount.title-34.red-text
 					span 1365
 					span руб
 		.contacts-wrapper
 			.row
 				.col-md-4
 					.contacts-column
-						h4 контактные даннные
+						.title-3 Контактные даннные
 						ul
 							li
 								span Имя:
@@ -48,7 +48,7 @@ section.order-receiver
 								p normalno@gmail.com
 				.col-md-4
 					.contacts-column
-						h4 Адрес доставки
+						.title-3 Адрес доставки
 						ul
 							li
 								span Улица:
@@ -61,7 +61,7 @@ section.order-receiver
 								p 29
 				.col-md-4
 					.contacts-column
-						h4 Доставка и оплата
+						.title-3 Доставка и оплата
 						ul
 							li
 								span Вариант доставки:
