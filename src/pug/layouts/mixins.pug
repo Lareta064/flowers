@@ -191,11 +191,41 @@ mixin saleCard(imgName, periodDate, title, text)
 					h3.title-3 !{title}
 					p !{text}
 mixin basketItem(imgSrc, title, price)
-	.basket-item
+	//корзина на мобильных
+	.basket-item.d-block.d-md-none
+		.row
+			.col-12
+				.basket-item-top
+					.basket-item__img(style='' + imgSrc)
+					.basket-item-set
+						.basket-item-param
+							.param-color(style="background-color: pink")
+						.basket-item-param.basket-item-size
+							p Высота стебля
+							p 60 см
+						.basket-item-param
+								p Размер букета
+								p Стандарт
+									span (как на фото)
+			.col-12
+				.basket-item-desk
+					h3 !{title}
+					+priceBlock(3500, 5500)(class=" price-block--big")
+					.basket-item-set
+						.basket-item-param
+							p Упаковка
+							p Стандартная
+								span.red-text (бесплатно)
+						.basket-item-param
+							p Дополнительно
+							p Средство для стойкости цветов
+								span.red-text (+0)		
+	//корзина на десктопах
+	.basket-item.d-none.d-md-block
 		.row
 			.col-md-3.col-lg-3.col-xl-2
 				.basket-item__img(style='' + imgSrc)
-					
+			
 			.col-md-5.col-lg-4
 				.basket-item-desk
 					h3 !{title}
@@ -209,14 +239,14 @@ mixin basketItem(imgSrc, title, price)
 						.basket-item-param
 							p Размер букета
 							p Стандарт
-								span.red-text (как на фото)
+								span (как на фото)
 								
 						.basket-item-param
 							p Высота стебля
 							p 60 см
 						
 						.basket-item-param
-							p Доподнительно
+							p Дополнительно
 							p Средство для стойкости цветов
 								span.red-text (+0)
 
@@ -229,7 +259,7 @@ mixin basketItem(imgSrc, title, price)
 					.d-tablet.basket-item__result.accent-item
 						p #{price} руб
 						button.remove-btn
-						+deleteCart
+							+deleteCart
 						
 			.d-none.d-lg-flex.col-lg-2.col-xl-3
 				.basket-item-col.basket-item-col--right

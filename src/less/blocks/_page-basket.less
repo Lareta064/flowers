@@ -1,10 +1,28 @@
-.basket {}
+.basket {
+	.title-row.mb-40 {
+		flex-direction: row;
+		display: flex;
+
+		@media(max-width:424px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
 
 .title-row.mb-40 {
 	margin-bottom: 40px;
 
+	@media(max-width:767px) {
+		margin-bottom: 30px;
+	}
+
 	h1 {
 		margin-bottom: 0;
+
+		@media(max-width:575px) {
+			margin-bottom: 15px;
+		}
 	}
 }
 
@@ -30,6 +48,11 @@
 		padding-bottom: 20px;
 	}
 
+	@media(max-width:767px) {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
 
 }
 
@@ -38,11 +61,23 @@
 	h3 {
 		font-size: 18px;
 		line-height: 1.39;
-		color: @pr;
+		color: @pr2;
 		font-family: @rb;
 		margin-bottom: 10px;
+
+		@media(max-width:767px) {
+			font-size: 16px;
+			line-height: 26px;
+			font-family: @rr;
+		}
 	}
 
+	.price-block {
+		@media(max-width:767px) {
+			justify-content: flex-start;
+			margin-bottom: 10px;
+		}
+	}
 }
 
 .basket-item-param {
@@ -98,23 +133,7 @@
 
 	}
 
-	@media(max-width:767px) {
 
-		min-width: 110px;
-		// min-height: 100px;
-	}
-
-	@media(max-width:424px) {
-
-		min-width: 90px;
-		min-height: 80px;
-	}
-
-	@media(max-width:575px) {
-		margin-left: auto;
-		margin-right: auto;
-
-	}
 }
 
 .basket-item-col {
@@ -209,6 +228,12 @@
 	border-bottom: 2px solid #F0F3F6;
 }
 
+.basket-result-left {
+	@media(max-width:767px) {
+		margin-bottom: 30px;
+	}
+}
+
 .title-18 {
 	font-size: 18px;
 	line-height: 25px;
@@ -226,6 +251,11 @@
 			width: 265px;
 			margin-right: 30px;
 			margin-bottom: 0;
+
+			@media(max-width:575px) {
+				width: 200px;
+				margin-right: 15px;
+			}
 		}
 	}
 
@@ -244,6 +274,15 @@
 
 	button+button {
 		margin-left: 10px;
+	}
+
+	@media(max-width:575px) {
+		display: block;
+
+		button+button {
+			margin-left: 0;
+			margin-top: 15px;
+		}
 	}
 }
 
@@ -265,4 +304,49 @@
 		margin-left: 25px;
 		height: 20px;
 	}
+}
+
+.basket-item {
+	.basket-item-top {
+		display: flex;
+		margin-bottom: 15px;
+
+		.basket-item__img {
+			width: 101px;
+			height: 90px;
+			margin-right: 10px;
+			flex-shrink: 0;
+			margin-left: 0;
+		}
+
+	}
+
+
+
+	@media(max-width:767px) {
+		.basket-item-param {
+			display: block;
+
+			p {
+				margin-left: 0;
+				margin-right: 0;
+
+				&+p {
+					margin-top: 5px;
+				}
+			}
+
+			&.basket-item-size {
+				display: flex;
+
+				p {
+					&+p {
+						margin-top: 0;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+
 }
