@@ -422,7 +422,16 @@ mixin arrow
 	l-104.504,104c-0.007,0.006-0.012,0.013-0.018,0.019c-7.809,7.792-7.834,20.496-0.002,28.314c0.007,0.006,0.012,0.013,0.018,0.019\
 	l104.504,104c7.828,7.79,20.492,7.763,28.285-0.068c7.792-7.829,7.762-20.492-0.067-28.284L68.442,276H492\
 	c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z")
-
+mixin arrDown
+	i&attributes(attributes)
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.61619L16.25 12.8662L15.3662 13.7499L10 8.38369L4.63375 13.7499L3.75 12.8662L10 6.61619Z" fill="#E21736"/>
+			<mask id="maskup" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="6" width="14" height="8">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.61619L16.25 12.8662L15.3662 13.7499L10 8.38369L4.63375 13.7499L3.75 12.8662L10 6.61619Z" fill="white"/>
+			</mask>
+			<g mask="url(#maskup)">
+			</g>
+			</svg>
 mixin openDrop
 	i&attributes(attributes)
 		svg(width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg")
