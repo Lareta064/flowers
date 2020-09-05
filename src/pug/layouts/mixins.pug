@@ -190,41 +190,53 @@ mixin saleCard(imgName, periodDate, title, text)
 				.sale-card__text
 					h3.title-3 !{title}
 					p !{text}
-mixin basketItem(imgSrc, text1, text2, oldPrice)
+mixin basketItem(imgSrc, title, price)
 	.basket-item
-		button.remove-item.remove-basket-item
-			+times(30, 30)
 		.row
-			.col-4.col-md-3.col-lg-2
-				.basket-item__img
-					if imgSrc
-						img(src="img/main/products/"+ imgSrc +".png", alt="product" width='170')
-					else
-						img(src="img/main/products/nofoto.jpg", alt="product" width='170')
-			.col-8.col-md-3.col-lg-3
-				.basket-item__head
-					a(href="product-card.html").title-34
-						span #{text1}
-						span #{text2}
-			.col-md-6.col-lg-3.border-col
-				.basket-item__descrip.text-16
-					.basic-descrip
-						p Урожай 2020 года
-					.addition-set
-						p Шелковица – небольшие мясистые плоды, которые имеют форму костянок 2-3 см. Ягоды сочные, сладкие и имеют приятный аромат.
+			.col-md-3.col-lg-3.col-xl-2
+				.basket-item__img(style='' + imgSrc)
+					
+			.col-md-5.col-lg-4
+				.basket-item-desk
+					h3 !{title}
+					.basket-item-set
+						.basket-item-param
+							.param-color(style="background-color: pink")
+						.basket-item-param
+							p Упаковка
+							p Стандартная
+								span.red-text (бесплатно)
+						.basket-item-param
+							p Размер букета
+							p Стандарт
+								span.red-text (как на фото)
+								
+						.basket-item-param
+							p Высота стебля
+							p 60 см
+						
+						.basket-item-param
+							p Доподнительно
+							p Средство для стойкости цветов
+								span.red-text (+0)
 
-			.col-lg-4
-				.basket-item__calc
-					//- button.remove-item.remove-basket-item
-					//- 	+times(30, 30)
-					.basket-item__addInfo Вес: 550 гр
-					.basket-item__summ
-						+counter(class="product-counter--big")
-						.basket-item__cost
-							.basket-item__cost-val.title-34 650
-							.basket-item__cost-dim руб
-							if oldPrice
-								.basket-item__old-price 500 руб
+			.col-md-4.col-lg-3
+				.basket-item-col
+					+priceBlock(3500, 5500)(class=" price-block--big")
+					.basket-item-count.d-flex
+						p Количество:
+						+counter
+					.d-tablet.basket-item__result.accent-item
+						p #{price} руб
+						button.remove-btn
+						+deleteCart
+						
+			.d-none.d-lg-flex.col-lg-2.col-xl-3
+				.basket-item-col.basket-item-col--right
+					button.remove-btn
+						+deleteCart
+					.basket-item__result.accent-item
+						p #{price} руб
 
 mixin main-product-card(title, imgSrc, weight, price, oldPrice,desk )
 	.product-card-item
@@ -463,5 +475,14 @@ mixin link-icon
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M14.6201 3.88005C14.0572 3.31518 13.2926 2.99768 12.4951 2.99768C11.6977 2.99768 10.933 3.31518 10.3701 3.88005L11.0801 4.59005C11.863 3.80718 13.1323 3.80718 13.9151 4.59005C14.698 5.37291 14.698 6.64218 13.9151 7.42505L9.91512 11.425C9.4087 11.9315 8.67057 12.1293 7.97878 11.9439C7.287 11.7585 6.74665 11.2182 6.56128 10.5264C6.37592 9.8346 6.5737 9.09647 7.08012 8.59005L7.79012 7.88005L7.08012 7.17005L6.37012 7.88005C5.19652 9.05365 5.19652 10.9564 6.37012 12.13C7.54373 13.3037 9.44652 13.3037 10.6201 12.13L14.6201 8.13005C15.185 7.56714 15.5025 6.8025 15.5025 6.00505C15.5025 5.20759 15.185 4.44295 14.6201 3.88005ZM2.09013 12.9101C1.71304 12.5347 1.50105 12.0246 1.50105 11.4926C1.50105 10.9605 1.71304 10.4504 2.09013 10.0751L6.09013 6.07506C6.59655 5.56864 7.33468 5.37086 8.02647 5.55622C8.71826 5.74159 9.2586 6.28193 9.44397 6.97372C9.62933 7.66551 9.43155 8.40364 8.92513 8.91006L7.85013 10.0001L8.56013 10.7101L9.62013 9.65006C10.3802 8.88998 10.6771 7.78214 10.3988 6.74384C10.1206 5.70555 9.30964 4.89455 8.27134 4.61634C7.23305 4.33814 6.12521 4.63498 5.36513 5.39506L1.36513 9.39506C0.19014 10.57 0.19014 12.4751 1.36513 13.6501C2.54011 14.825 4.44514 14.825 5.62013 13.6501L4.92513 12.9101C4.54979 13.2871 4.03967 13.4991 3.50763 13.4991C2.97558 13.4991 2.46546 13.2871 2.09013 12.9101Z" fill="white"/>
 		</mask>
 		<g mask="url(#masklink)">
+		</g>
+		</svg>
+mixin deleteCart
+	<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.25H7.5V2.5H12.5V1.25ZM2.5 5V3.75H17.5V5H16.25V17.5C16.25 18.1904 15.6904 18.75 15 18.75H5C4.30964 18.75 3.75 18.1904 3.75 17.5V5H2.5ZM7.5 7.5H8.75V15H7.5V7.5ZM11.25 7.5H12.5V15H11.25V7.5ZM5 17.5V5H15V17.5H5Z" fill="#E21736"/>
+		<mask id="maskdel" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="1" width="16" height="18">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 1.25H7.5V2.5H12.5V1.25ZM2.5 5V3.75H17.5V5H16.25V17.5C16.25 18.1904 15.6904 18.75 15 18.75H5C4.30964 18.75 3.75 18.1904 3.75 17.5V5H2.5ZM7.5 7.5H8.75V15H7.5V7.5ZM11.25 7.5H12.5V15H11.25V7.5ZM5 17.5V5H15V17.5H5Z" fill="white"/>
+		</mask>
+		<g mask="url(#maskdel)">
 		</g>
 		</svg>

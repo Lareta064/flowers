@@ -55,6 +55,74 @@ $(document).ready(function () {
 		})
 	}
 
+	// моб меню - показать выпадающие меню
+	const openMenuLevel2 = document.querySelectorAll('.drop-menu_2');
+	const openMenuLevel3 = document.querySelectorAll('.drop-menu_3');
+
+
+	function foldWithChildren(dropMenuItem) {
+		let itemIcon = dropMenuItem.querySelector(".drop-icon");
+		let childrenMenu = dropMenuItem.querySelector(".submenu");
+
+		itemIcon.classList.remove('active');
+		childrenMenu.classList.remove('active');
+
+		let childrenMenuChildren = childrenMenu.querySelectorAll('.drop-menu');
+		for (let item of childrenMenuChildren) {
+			foldWithChildren(item);
+		}
+	}
+
+	function goUpAndFoldSiblings(dropMenuItem) {
+		let ancestor = dropMenuItem.parentElement.closest('.drop-menu');
+
+		if (ancestor == null)
+			return;
+
+		let next = dropMenuItem.nextElementSibling;
+		while (next != null) {
+			if (next.classList.contains("drop-menu")) {
+				foldWithChildren(next);
+			}
+			next = next.nextElementSibling;
+		}
+		let prev = dropMenuItem.previousElementSibling;
+		while (prev != null) {
+			if (prev.classList.contains("drop-menu")) {
+				foldWithChildren(prev);
+			}
+			prev = prev.previousElementSibling;
+		}
+		goUpAndFoldSiblings(ancestor);
+	}
+
+	function showSubmenu(item, subMenuClass) {
+		item.addEventListener('click', function (e) {
+			//e.stopPropagation();
+
+			const thisIcon = this.querySelector('.drop-icon')
+			const subMenuLevel = this.querySelector(`${subMenuClass}`)
+
+			if (e.target == thisIcon) {
+
+				if (thisIcon.classList.contains('active')) {
+					foldWithChildren(item);
+					//subMenuLevel.classList.remove('active');
+					//thisIcon.classList.remove('active');
+				} else {
+					goUpAndFoldSiblings(item);
+					subMenuLevel.classList.add('active');
+					thisIcon.classList.add('active');
+				}
+			}
+		});
+	}
+	for (let item of openMenuLevel2) {
+		showSubmenu(item, '.submenu-2');
+	}
+	for (let item of openMenuLevel3) {
+		showSubmenu(item, '.submenu-3');
+	}
 	// слайдер Новые предложения на главной
 	let productSlider = $('.product-slider');
 	productSlider.owlCarousel({
@@ -426,58 +494,58 @@ $(document).ready(function () {
 	/*-------------PAGE-BASKET-------------*/
 
 	/*-------REMOVE BASKET ITEM-----*/
-	const basketPage = document.querySelector('.basket');
-	if (basketPage) {
+	// const basketPage = document.querySelector('.basket');
+	// if (basketPage) {
 
-		const basketTable = document.getElementById('basket-table')
-		const basketItems = basketTable.querySelectorAll('.basket-item');
-		const cleanBasket = basketPage.querySelector('.basket-clean');
+	// 	const basketTable = document.getElementById('basket-table')
+	// 	const basketItems = basketTable.querySelectorAll('.basket-item');
+	// 	const cleanBasket = basketPage.querySelector('.basket-clean');
 
-		const basketResultRow = basketPage.querySelector('.basket-result');
-		const basketStateText = basketPage.querySelector('.basket-state');
-
-
-		for (let i = 0; i < basketItems.length; i++) {
-
-			const iconRemoveItem = basketItems[i].querySelector('.remove-basket-item');
-			const iconRemoveAddProduct = basketItems[i].querySelector('.remove-addition');
-			const addProducts = basketItems[i].querySelector('.addition-set');
-
-			basketItems[i].addEventListener('click', function (e) {
-
-				if (e.target == iconRemoveAddProduct) {
-					e.stopPropagation();
-					addProducts.remove();
-				}
-
-				if (e.target == iconRemoveItem) {
-
-					const data = basketTable.querySelectorAll('.basket-item');
-
-					if (data.length == 1) {
-						e.stopPropagation();
-						this.remove();
-						basketResultRow.remove();
-						basketStateText.classList.remove('d-none');
+	// 	const basketResultRow = basketPage.querySelector('.basket-result');
+	// 	const basketStateText = basketPage.querySelector('.basket-state');
 
 
-					} else {
-						e.stopPropagation();
+	// 	for (let i = 0; i < basketItems.length; i++) {
 
-						this.remove();
+	// 		const iconRemoveItem = basketItems[i].querySelector('.remove-basket-item');
+	// 		const iconRemoveAddProduct = basketItems[i].querySelector('.remove-addition');
+	// 		const addProducts = basketItems[i].querySelector('.addition-set');
 
-					}
-				}
-			})
-		}
+	// 		basketItems[i].addEventListener('click', function (e) {
 
-		/*  очистить по клику на иконку корзины*/
-		cleanBasket.addEventListener('click', function () {
-			basketTable.remove();
-			basketResultRow.remove();
-			basketStateText.classList.remove('d-none');
-		})
-	}
+	// 			if (e.target == iconRemoveAddProduct) {
+	// 				e.stopPropagation();
+	// 				addProducts.remove();
+	// 			}
+
+	// 			if (e.target == iconRemoveItem) {
+
+	// 				const data = basketTable.querySelectorAll('.basket-item');
+
+	// 				if (data.length == 1) {
+	// 					e.stopPropagation();
+	// 					this.remove();
+	// 					basketResultRow.remove();
+	// 					basketStateText.classList.remove('d-none');
+
+
+	// 				} else {
+	// 					e.stopPropagation();
+
+	// 					this.remove();
+
+	// 				}
+	// 			}
+	// 		})
+	// 	}
+
+	/*  очистить по клику на иконку корзины*/
+	// 	cleanBasket.addEventListener('click', function () {
+	// 		basketTable.remove();
+	// 		basketResultRow.remove();
+	// 		basketStateText.classList.remove('d-none');
+	// 	})
+	// }
 
 	/*---------ЛИЧНЫЕ ДАННЫЕ   ПОКАЗАТЬ ПАРОЛЬ------- */
 	const showPasswIcon = document.querySelector('#toggle-passw');

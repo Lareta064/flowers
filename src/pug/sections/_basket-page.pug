@@ -1,37 +1,48 @@
 
-section.basket.pt-30
+section.basket.pt-30.pb-80
 	.container
 		.brcrumg
 			.brcrumg-item
 				a(href="index.html") Главная
 			.brcrumg-item
 				a(href="#!") Корзина
-		h1.page-title Корзина
-		.basket-state.d-none
-			h2 В корзине нет товаров
+		.title-row.mb-40
+			h1.page-title Корзина
+			button.upper-link.restart-basket Обновить корзину
+		
 		.basket-content
 			.basket-table#basket-table
-				+basketItem('product1', 'Шелковица', 'Армения')
-				+basketItem('product2','Крыжовник', 'Россия')
-				+basketItem('product3','Бананы', 'отборные','500')
-				+basketItem('product4','Вешенки')
+				+basketItem('background-image: url(img/products/elvira.jpg)', 'Букет "Миранда"', 2390)
+				+basketItem('background-image: url(img/products/new1.jpg)', 'Букет "Миранда"', 2390)
+				+basketItem('background-image: url(img/products/new2.jpg)', 'Букет "Миранда"', 2390)
+				+basketItem('background-image: url(img/products/new3.jpg)', 'Букет "Миранда"', 2390)
+				
 			.basket-result
 				.row
-					.col-md-6.col-lg-4.offset-lg-2.col-xl-4.offset-xl-3.order-md-2
-						.total-amount
-							span.title-3 Итого:
-							span 14&nbsp;шт на сумму 
-							.basket-item__cost
-								.basket-item__cost-val.title-34 1650
-								.basket-item__cost-dim руб
-					.col-md-6.col-xl-5.order-md-1
-						.basket-btn
-							a(href="checkout-order.html").page-button.page-button--red Перейти к оформлению
-							button.basket-clean.page-btn2
+					.col-md-8.col-lg-7.col-xl-6
+						.basket-result-left
+							.promo-block
+								.title-18
+									p Введите промокод:
+								form.promo-form
+									.form-group 
+										input(type="text" name="userPromo"  )
+										span.fake-placeholder Введите текст
+									.promo-block-btn
+										button(type="submit").h-40.page-button.page-button--light Применить
+					.col-md-4.col-lg-5.col-xl-6
+						.basket-result-right
+							.title-18
+								p Итого:
+							.basket-total-summ.accent-item
+								p 5685 руб
+					
+			.basket-footer.pt-30
+				.row
+					.col
+						.basket-footer__btn
+							button.page-button.page-button--red Перейти к оформлению
+							button.remove-all.border-btn
 								span Очистить корзину
 								span
-									svg(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
-										path(fill-rule="evenodd" clip-rule="evenodd" d="M10 1H6V2H10V1ZM2 4V3H14V4H13V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V4H2ZM6 6H7V12H6V6ZM9 6H10V12H9V6ZM4 14V4H12V14H4Z" fill="#1F1F1F")
-										mask(id="mask-del" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="1" width="12" height="14")
-											path(fill-rule="evenodd" clip-rule="evenodd" d="M10 1H6V2H10V1ZM2 4V3H14V4H13V14C13 14.5523 12.5523 15 12 15H4C3.44772 15 3 14.5523 3 14V4H2ZM6 6H7V12H6V6ZM9 6H10V12H9V6ZM4 14V4H12V14H4Z" fill="white")
-				
+									+deleteCart

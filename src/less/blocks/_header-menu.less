@@ -161,20 +161,6 @@
 		font-family: @rb;
 		color: @ac1;
 		margin-bottom: 10px;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-
-		.open-list {
-			width: 30px;
-			height: 30px;
-			border: 1px solid red;
-			font-size: 30px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			cursor: pointer;
-		}
 	}
 
 	.acordion-list-items {
@@ -204,11 +190,7 @@
 
 	.drop-menu {
 		height: auto;
-		width: 300px;
-		background-color: transparent;
-		transform: translate(0%, 0%);
-		position: relative;
-
+		width: auto;
 
 		.acordion-list-items {
 			display: none;
@@ -216,13 +198,7 @@
 
 		.drop-menu-wrapper {
 			display: block;
-			box-shadow: none;
-			background: transparent;
-			border-radius: 0px;
 
-			.acordion-list+.acordion-list {
-				margin-left: 0px;
-			}
 		}
 	}
 
