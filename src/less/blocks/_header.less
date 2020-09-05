@@ -13,12 +13,23 @@
 
 .header-top {
 	background-color: #fff;
-	padding-top: 38px;
-	padding-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: relative;
 
 	@media(max-width:1199px) {
 		padding-top: 15px;
 	}
+}
+
+.header-top:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 1px;
+	top: 55px;
+	background-color: #EBECED;
 }
 
 .header-top.fixed {
@@ -53,25 +64,14 @@
 .header-nav {
 	flex-grow: 1;
 
-	.logo.logo-small {
-		display: none;
-	}
 
 	@media(max-width:1199px) {
 		display: flex;
 		flex-direction: column-reverse;
 
-		.logo.logo-small {
-			display: block;
-			width: 100px;
-		}
 	}
 
-	@media(max-width:767px) {
-		.logo.logo-small {
-			width: 70px;
-		}
-	}
+
 
 }
 
@@ -115,6 +115,7 @@
 	font-family: @rb;
 	text-transform: uppercase;
 	color: @pr;
+	padding-bottom: 5px;
 
 	span+span {
 		padding-left: 5px;
@@ -164,6 +165,10 @@
 	margin-left: auto;
 	padding-top: 20px;
 
+	.contact-phone {
+		// padding-right: 5px;
+	}
+
 	.contact-phone a {
 		color: #fff;
 		font-size: 18px;
@@ -176,16 +181,16 @@
 
 }
 
-.header-menu__contacts .social-icons {
-	display: none;
+// .header-menu__contacts .social-icons {
+// 	display: none;
 
-	@media(max-width:1199px) {
-		display: flex;
-		margin-top: 10px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
+// 	@media(max-width:1199px) {
+// 		display: flex;
+// 		margin-top: 10px;
+// 		margin-left: auto;
+// 		margin-right: auto;
+// 	}
+// }
 
 .header-nav__row:first-child {
 	margin-bottom: 21px;
@@ -197,8 +202,8 @@
 }
 
 .header-nav__row:last-child {
-	padding-top: 28px;
-	padding-bottom: 29px;
+	padding-top: 18px;
+	padding-bottom: 0px;
 }
 
 @media (max-width: 1199px) {
@@ -223,7 +228,7 @@
 	-ms-flex-align: center;
 	align-items: center;
 	position: relative;
-	top: 2px;
+
 }
 
 
@@ -264,94 +269,45 @@
 	background-repeat: no-repeat;
 }
 
-.user-avatar a img {
-	border-radius: 50%;
-}
-
-.user-controls .user-favor {
-	position: relative;
-	margin-left: 30px;
 
 
-	a {
-		height: auto;
+.user-panel {
+
+	.user-favor a,
+	.user-basket a {
+		min-width: 35px;
+		min-height: 35px;
+		max-width: 35px;
+		max-height: 35px;
+		display: block;
+		border-radius: 50%;
+		border: 1px solid @ac1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: relative;
-		z-index: 2;
+		margin-left: 27px;
 	}
 
-}
-
-.user-basket {
-	position: relative;
-	margin-left: 28px;
-	top: 6px;
-
-	a {
-		line-height: 1;
+	.user-favor i {
+		color: @ac1;
 	}
 
-}
-
-@media(max-width:1199px) {
-	.user-controls .user-favor {
-		margin-left: 24px;
-	}
-
-	.user-controls .user-basket {
-		margin-left: 14px;
+	.item-value {
+		position: absolute;
+		top: -3px;
+		right: -6px;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background: linear-gradient(90deg, #E21736 0%, #FC778D 100%);
+		color: #fff;
+		font-size: 10px;
+		line-height: 13px;
+		text-align: center;
 	}
 }
 
-@media(max-width:767px) {
-
-	.user-controls .user-basket {
-		margin-left: 10px;
-		top: 3px;
-	}
-
-	.user-controls .user-favor {
-		margin-left: 20px;
-	}
-}
-
-@media(max-width:374px) {
-
-	.user-controls .user-basket {
-		margin-left: 6px;
-	}
-
-	.user-controls .user-favor {
-		margin-left: 15px;
-	}
-}
-
-.user-log-in {
-	position: relative;
-	top: 4px;
-
-}
-
-.favor-value,
-.basket-value {
-	position: absolute;
-	top: -12px;
-	right: -11px;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	line-height: 20px;
-	font-size: 12px;
-	text-align: center;
-	background-color: @red;
-	display: block;
-	color: #fff;
-}
-
-.favor-value {
-	top: -1px;
-	right: 1px;
-	z-index: 1;
-}
 
 
 .header-nav__row .contact-phone {
@@ -397,14 +353,14 @@
 	}
 }
 
-.user-controls {
+.user-panel {
 	display: flex;
 	align-items: center;
-	margin-left: auto;
-	// padding-bottom: 10px;
-	padding-right: 10px;
+	margin-left: 50px;
+	padding-bottom: 7px;
+	padding-right: 5px;
 	position: relative;
-	top: -2px;
+
 
 	@media(max-width:1199px) {
 		padding-bottom: 0;
@@ -416,13 +372,13 @@
 }
 
 @media(max-width:1199px) {
-	.user-controls {
+	.user-panel {
 		padding-right: 0px;
 		top: 0px;
 	}
 }
 
-.user-controls a {
+.user-panel a {
 	display: block;
 
 
@@ -437,15 +393,14 @@ svg {
 	max-height: 100%;
 }
 
-.user-controls a svg {
+.user-panel a svg {
 
 	-webkit-transition: .3;
 	-o-transition: .3;
 	transition: .3;
 }
 
-
-.user-controls a:hover svg path {
+.user-panel .user-panel a:hover svg path {
 	fill: @green;
 }
 

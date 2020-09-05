@@ -20,8 +20,7 @@ mixin header(menuItems, avatarSrc)
 							a(href="index.html").logo
 								span.red-text M
 								span flowers
-							a(href="index.html").logo.logo-small
-								img(src="img/main/logo.png", alt="logo")
+							
 							ul.header-menu
 								each item in menuItems
 									if item.addClass
@@ -80,11 +79,10 @@ mixin header(menuItems, avatarSrc)
 
 								.menu-social
 									+social-icons
-							.user-controls
+							.user-panel
 								if avatarSrc
 									.user-avatar
-										span
-										a(href="#" style="background-image: url(img/main/icons/"+  avatarSrc +".jpg), url(img/main/icons/noavatar.jpg) ")
+										a(href="#!" style="background-image: url(img/avatar.jpg), url(img/main/icons/noavatar.jpg)")
 
 								else
 									.user-log-in
@@ -93,12 +91,12 @@ mixin header(menuItems, avatarSrc)
 
 								.user-favor
 									a(href="#!")
-										+favor
-										span.favor-value 2
+										i.fas.fa-heart
+										span.item-value 2
 								.user-basket
 									a(href="page-basket.html")
 										+cart-icon
-										span.basket-value 2
+										span.item-value 2
 							.menu-toggle
 								span
 		.cat-panel#catPanel
