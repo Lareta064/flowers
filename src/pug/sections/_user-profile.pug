@@ -4,8 +4,8 @@ section.user-profile.pt-30
 			.brcrumg-item
 				a(href="index.html") Главная
 			.brcrumg-item
-				a(href="stocks.html") Личный кабинет
-		h1.page-title Личный кабинет
+				a(href="#!") Личный кабинет
+		h1.page-title.mb-50 Личный кабинет
 		// ============  ТАБЫ ============
 		.user-profile__tabs
 			nav
@@ -22,10 +22,10 @@ section.user-profile.pt-30
 									.add-avatar__col
 										input(type="file" id="file" data-multiple-caption="{count} файлов выбрано" multiple class="inputfile")
 										label.form-label(for="file")
-											span Выбрать файл
+											span Заменить файл
 									.add-avatar__col
 										.user-avatar
-											a(href="#" style="background-image: url(img/main/icons/avatar.jpg), url(img/main/icons/noavatar.jpg)")
+											a(href="#!" style="background-image: url(img/avatar.jpg), url(img/main/icons/noavatar.jpg)")
 								.form-body
 									.form-col
 										.form-group
@@ -53,18 +53,23 @@ section.user-profile.pt-30
 								.form-footer
 									.subscribes-block
 										.subscribes-block__top
+											.admin-icon
+												+admin
 											p Согласен на отправку:
 											.subscribes-block__inputs
-												label.form-label sms
-													input.form-checkbox(type="checkbox" name='smsCheck' checked)
+												label(class="form-label") sms
+													input(class="form-checkbox" type="checkbox" )
 													span.custom-checkbox
+												//- label.form-label 
+												//- 	input.form-checkbox(type="checkbox" name='smsCheck' checked)
+												//- 	span.custom-checkbox
 												label.form-label email
-													input.form-checkbox(type="checkbox" name='smsCheck')
+													input.form-checkbox(type="checkbox" name='smsCheck' checked)
 													span.custom-checkbox
 										p Мы не рассылаем спам. Вы будете получать только актуальную информацию о наших акциях.
 									.flex-wrapper
-										button.page-button.page-btn4 Изменить данные
-							.text-16.politic-agree
+										button.page-button.page-button--red.h-40 Изменить данные
+							.text-14.politic-agree
 								p Работа с персональными данными на этом сайте ведется в соответствии с #[a(href="#") политикой конфиденциальности].
 					
 					// ============ ИСТОРИЯ ЗАКАЗОВ ============

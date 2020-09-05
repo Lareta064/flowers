@@ -22,9 +22,9 @@
 			justify-content: flex-end;
 		}
 
-		&:first-child {
-			border-top: 2px solid #F0F3F6;
-		}
+		// &:first-child {
+		// 	border-top: 2px solid #F0F3F6;
+		// }
 	}
 
 	.panel-heading {
@@ -172,17 +172,26 @@
 	.nav-tabs,
 	.nav-tabs .nav-link {
 		border: none;
+		border-bottom: 1px solid #F0F3F6;
 	}
 
 	.nav-tabs .nav-link {
 		padding-bottom: 0;
 		padding-top: 2px;
 		border-bottom: 3px solid transparent;
-		margin-right: 1.1em;
+
 		font-family: @mainfont;
 		padding-left: 0;
 		padding-right: 0;
 		padding-bottom: 5px;
+
+		&+.nav-link {
+			margin-left: 1.1em;
+		}
+
+		@media(max-width:424px) {
+			letter-spacing: -0.9px;
+		}
 
 	}
 
@@ -213,12 +222,44 @@
 
 	.user-avatar {
 		position: relative;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+
+		&:after {
+			content: '';
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			border: 1px solid @ac1;
+			position: absolute;
+			left: 50%;
+			top: 49%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:before {
+			content: '';
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			border: 2px solid #fff;
+			position: absolute;
+			right: -3px;
+			top: -3px;
+			z-index: 5;
+			background-color: #FF8480;
+		}
 	}
 }
 
 .content-inner--pt {
-	padding-top: 40px;
+	padding-top: 32px;
 	padding-bottom: 40px;
+
+	.form-group {
+		margin-bottom: 7px;
+	}
 
 	.form-body {
 		display: flex;
@@ -296,7 +337,7 @@
 			height: 20px;
 			position: absolute;
 			left: 0;
-			top: 1px;
+			top: 2px;
 			background-image: url(../img/main/icons/warning.svg);
 			background-position: 0 0;
 			background-repeat: no-repeat;
@@ -318,7 +359,7 @@
 
 	.flex-wrapper {
 		@media(max-width:767px) {
-			text-align: center;
+
 			margin-top: 20px;
 		}
 	}
