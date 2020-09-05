@@ -34,17 +34,22 @@
 	}
 }
 
+.basket-content {
+	border-top: 2px solid #F0F3F6;
+}
+
 .basket-item {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	border-bottom: 2px solid #F0F3F6;
 	position: relative;
 
-	&:first-child {
-		border-top: 2px solid #F0F3F6;
-	}
+	// &:first-child {
+	// 	border-top: 2px solid #F0F3F6;
+	// }
 
 	@media(max-width:1199px) {
+		padding-top: 20px;
 		padding-bottom: 20px;
 	}
 
@@ -77,6 +82,10 @@
 			justify-content: flex-start;
 			margin-bottom: 10px;
 		}
+	}
+
+	@media(max-width:767px) {
+		margin-bottom: 20px;
 	}
 }
 
@@ -144,6 +153,10 @@
 	justify-content: space-between;
 
 
+}
+
+.basket-item-col.basket-item-col--price {
+	align-items: flex-start;
 }
 
 .accent-item {

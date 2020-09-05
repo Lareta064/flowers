@@ -210,7 +210,6 @@ mixin recivedBasketItem(imgSrc, title, price)
 			.col-12
 				.basket-item-desk
 					h3 !{title}
-					+priceBlock(3500, 5500)(class=" price-block--big")
 					.basket-item-set
 						.basket-item-param
 							p Упаковка
@@ -220,6 +219,13 @@ mixin recivedBasketItem(imgSrc, title, price)
 							p Дополнительно
 							p Средство для стойкости цветов
 								span.red-text (+0)
+			
+						
+			.col-12
+				.basket-item-col.basket-mob-cost
+					.title-3 Стоимость:
+					.basket-item__result.accent-item
+						p  #{price} руб
 	//корзина на десктопах
 	.basket-item.d-none.d-md-block
 		.row
@@ -283,7 +289,7 @@ mixin basketItem(imgSrc, title, price)
 			.col-12
 				.basket-item-desk
 					h3 !{title}
-					+priceBlock(3500, 5500)(class=" price-block--big")
+					+priceBlock(3500, 5500)
 					.basket-item-set
 						.basket-item-param
 							p Упаковка
@@ -292,7 +298,18 @@ mixin basketItem(imgSrc, title, price)
 						.basket-item-param
 							p Дополнительно
 							p Средство для стойкости цветов
-								span.red-text (+0)		
+								span.red-text (+0)
+			.col-6
+				
+				.basket-item-col
+					.basket-item-count.d-flex
+						p Количество:
+						+counter
+						
+			.col-6
+				.basket-item-col.basket-item-col--right
+					.basket-item__result.accent-item
+						p #{price} руб		
 	//корзина на десктопах
 	.basket-item.d-none.d-md-block
 		.row
@@ -324,8 +341,8 @@ mixin basketItem(imgSrc, title, price)
 								span.red-text (+0)
 
 			.col-md-4.col-lg-3
-				.basket-item-col
-					+priceBlock(3500, 5500)(class=" price-block--big")
+				.basket-item-col.basket-item-col--price
+					+priceBlock(3500, 5500)
 					.basket-item-count.d-flex
 						p Количество:
 						+counter
