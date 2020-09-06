@@ -202,6 +202,10 @@ form .agree-text {
 			opacity: .5;
 		}
 	}
+
+	label {
+		font-family: @rr;
+	}
 }
 
 .modal-content {
@@ -214,7 +218,7 @@ form .agree-text {
 }
 
 @media (min-width: 768px) {
-	.modal-dialog {
+	.modal-diamin- {
 		max-width: 570px;
 	}
 
@@ -304,8 +308,10 @@ form .agree-text {
 	position: absolute;
 	left: 0;
 	top: 2px;
-	width: 14px;
-	height: 14px;
+	min-width: 14px;
+	min-height: 14px;
+	max-width: 14px;
+	max-height: 14px;
 	border: 1px solid @green;
 	border-radius: 100%;
 	background: #fff;
@@ -321,8 +327,8 @@ form .agree-text {
 [type="radio"]:checked+label:after,
 [type="radio"]:not(:checked)+label:after {
 	content: '';
-	width: 6px;
-	height: 6px;
+	min-width: 6px;
+	min-height: 6px;
 	background: @green;
 
 	position: absolute;
@@ -352,16 +358,21 @@ form .agree-text {
 .form-block label {
 	span {
 		display: block;
+		font-family: @rr;
 	}
 
-	.text-12;
-	color: @black;
-	color: @dark;
+	font-size: 10px;
+	line-height: 14px;
+
+
+	color: #8F8F8F;
 	margin-top: 4px;
 
 	span:first-child {
-		color: @black;
+		color: @pr;
 		margin-top: 0px;
+		margin-bottom: 5px;
+		.text-12;
 	}
 }
 
@@ -394,6 +405,8 @@ form .agree-text {
 	display: flex;
 	align-items: center;
 	position: relative;
+	margin-bottom: 10px;
+
 
 	.admin-icon {
 		position: absolute;
@@ -436,6 +449,7 @@ form .agree-text {
 		display: flex;
 		cursor: pointer;
 		align-items: center;
+		margin-top: 0;
 
 		&:last-child {
 			margin-right: 0;

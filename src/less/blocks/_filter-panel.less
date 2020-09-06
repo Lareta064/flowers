@@ -310,13 +310,15 @@ li.drop-list.active:after {
 .color-filter .fake-label {
 	position: absolute;
 	top: 0;
-	width: 22px;
-	height: 22px;
+	min-width: 22px;
+	min-height: 22px;
+	max-width: 22px;
+	max-height: 22px;
 	border-radius: 50%;
 
 }
 
-.color-filter.filter-panel--color .form-group:first-child input[type="radio"]:checked+.fake-label {
+.color-filter.filter-panel--color .form-group--noColor input[type="radio"]:checked+.fake-label {
 	&:after {
 		display: none;
 	}
@@ -328,8 +330,10 @@ li.drop-list.active:after {
 .color-filter input[type="radio"]:checked+.fake-label {
 	&:after {
 		content: '';
-		width: 19px;
-		height: 19px;
+		min-width: 19px;
+		min-height: 19px;
+		max-width: 19px;
+		max-height: 19px;
 		border-radius: 50%;
 		border: 3px solid #fff;
 		background-color: transparent;

@@ -7,36 +7,10 @@
 	.form-group--btn {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 
-		.page-button:hover {
-			background-color: @hoverred;
-			color: #fff;
-		}
-
-		a {
-			white-space: nowrap;
-			position: relative;
-			display: block;
-			color: @black;
-			height: 40px;
-			line-height: 38px;
-			border-radius: 100px;
-			border: 1px solid transparent;
-			padding-left: 30px;
-			padding-right: 30px;
-			.tr;
-
-			&:hover {
-				border: 1px solid @red;
-				color: @red;
-			}
-
-			i {
-				margin-right: 12px;
-
-			}
-
+		input.page-button {
+			width: auto;
+			margin-left: 30px;
 		}
 	}
 
@@ -98,16 +72,22 @@ span.addprice {
 
 }
 
-.title-3.mb-20 {
-	margin-bottom: 20px;
+.title-3.mb-30 {
+	margin-bottom: 30px;
 }
 
 .form-column .form-block {
 	margin-bottom: 30px;
 }
 
-.form-column .total-amount {
+.checkout-page .table-row.table-row__result {
+	border-bottom: 0px;
+}
+
+.checkout-page .form-column .total-amount {
 	justify-content: flex-start;
+	display: flex;
+	align-items: center;
 
 	.title-3 {
 		margin-bottom: 0;
@@ -128,7 +108,7 @@ span.addprice {
 	padding: 17px;
 	width: 335px;
 	padding-right: 55px;
-	background: @lgYellow;
+	background: @ac4;
 	// border: 1px solid #EEE6E2;
 	border-radius: 5px;
 	color: #A3A7B4;
@@ -155,7 +135,7 @@ span.addprice {
 	bottom: -1px;
 	width: 0;
 	height: 0;
-	border: 17px solid @lgYellow;
+	border: 17px solid @ac4;
 	// border: 17px solid red;
 	border-bottom: 0px;
 	border-left-color: transparent;
@@ -168,7 +148,7 @@ span.addprice {
 		bottom: -8px;
 		transform: rotate(0deg);
 		// border: 7px solid red;
-		border: 8px solid @lgYellow;
+		border: 8px solid @ac4;
 		border-bottom: 0px;
 		border-left-color: transparent;
 		border-right-color: transparent;
@@ -371,4 +351,16 @@ span.addprice {
 
 .form-column--2 .form-block {
 	margin-bottom: 20px;
+}
+
+.form-column .table-row p span {
+	font-family: @rr;
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+.form-column .total-amount {
+	margin-bottom: 0;
 }
