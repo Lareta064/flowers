@@ -413,15 +413,51 @@ $(document).ready(function () {
 
 	});
 
+	//MENU
+	$(".menu--action-fold").click(function (e) {
+		e.stopImmediatePropagation();
+		let foldableElement = $(e.target).closest(".menu--contains-foldable").children(".menu--foldable");
+		if (foldableElement.hasClass("menu--folded")) {
+			foldableElement.removeClass("menu--folded");
+			menuUnfolded($(e.target).closest(".menu--contains-foldable"), $(e.target), foldableElement);
+			let foldableSiblings = foldableElement.closest(".menu--contains-foldable").siblings(".menu--contains-foldable");
+			for (let i = 0; i < foldableSiblings.length; i++) {
+				console.log("first step: " + foldableSiblings.length);
+				goDeepAndFold(foldableSiblings[i]);
+			}
+		} else {
+			foldableElement.addClass("menu--folded");
+			menuFolded($(e.target).closest(".menu--contains-foldable"), $(e.target), foldableElement);
+		}
+	});
+
+	function menuFolded(block, button, foldable) { //когда меню закрыли
+		$(button).text("+");
+	}
+
+	function menuUnfolded(block, button, foldable) {
+		$(button).text("-");
+	}
+
+	function goDeepAndFold(element) {
+		let foldableChild = $(element).children(".menu--foldable");
+		foldableChild.addClass("menu--folded");
+		menuFolded(element, $(element).find(".menu--action-fold")[0], foldableChild);
+		let diveList = foldableChild.find(".menu--contains-foldable");
+		for (let i = 0; i < diveList.length; i++) {
+			goDeepAndFold(diveList[i]);
+		}
+	}
+
 	/*ЗАКРЫВАТЬ ОТКРЫТУЮ ПЛАШКУ АККОРДЕОНА В ИСТОРИИ ЗАКАЗОВ*/
-	$('.orders-history .panel-collapse').on('show.bs.collapse', function () {
+	$('#user-history .panel-collapse').on('show.bs.collapse', function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).children().children('.accordion-item__icon').children("i");
 		let tabIconText = $("#" + $(this).attr("aria-labelledby")).children().children('.accordion-item__icon').children("span");
 		tabIcon.addClass("up");
 		tabIconText.text("Свернуть");
 	});
 
-	$('.orders-history .panel-collapse').on('hide.bs.collapse', function () {
+	$('#user-history .panel-collapse').on('hide.bs.collapse', function () {
 		let tabIcon = $("#" + $(this).attr("aria-labelledby")).children().children('.accordion-item__icon').children("i");
 		let tabIconText = $("#" + $(this).attr("aria-labelledby")).children().children('.accordion-item__icon').children("span");
 		tabIcon.removeClass("up");
