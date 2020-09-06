@@ -31,6 +31,8 @@ mixin header(menuItems, avatarSrc)
 										li.active.drop-item.menu--contains-foldable
 											.drop-item-title
 												a(href=" "+ item.hrefLink) #{item.text}
+												span.open-drop-desktop
+													+arrDown
 												span.open-drop.menu--action-fold +
 											.drop-menu.menu--foldable.menu--folded
 												.drop-menu-wrapper

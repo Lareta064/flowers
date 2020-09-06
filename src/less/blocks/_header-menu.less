@@ -139,9 +139,15 @@
 
 .open-drop {
 	font-size: 30px;
-	position: relative;
-	top: 5px;
-	right: -10px;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	z-index: 3;
+	width: 25px;
+	height: 25px;
+	line-height: 1;
+	font-family: @rr;
+	text-align: center;
 }
 
 .open-list {
@@ -157,6 +163,7 @@
 		height: 25px;
 		line-height: 1;
 		font-family: @rr;
+		text-align: center;
 	}
 }
 
@@ -165,11 +172,11 @@
 	position: absolute;
 	bottom: 0;
 	left: 0%;
-
+	z-index: 5;
 	transform: translate(-50%, 100%);
 
-	overflow: hidden;
-	.tr;
+	// overflow: hidden;
+	// transition: height .5s;
 
 
 
@@ -223,7 +230,7 @@
 		line-height: 19px;
 		font-family: @rb;
 		color: @ac1;
-		margin-bottom: 10px;
+		// margin-bottom: 10px;
 		position: relative;
 
 		@media(max-width:1199px) {
@@ -232,6 +239,9 @@
 
 		&>a {
 			color: @pr2;
+			font-size: 13px;
+			line-height: 19px;
+			padding-bottom: 10px;
 
 		}
 
@@ -244,18 +254,20 @@
 		a {
 			font-size: 14px;
 			line-height: 24px;
+			padding-bottom: 2px;
+			padding-top: 2px;
 
 			@media(max-width:1199px) {
 				line-height: 18px;
 			}
 
-			&+a {
-				margin-top: 5px;
+			// &+a {
+			// 	margin-top: 5px;
 
-				@media(max-width:1199px) {
-					margin-top: 0;
-				}
-			}
+			// 	@media(max-width:1199px) {
+			// 		margin-top: 0;
+			// 	}
+			// }
 
 			&.active {
 				color: @ac1;
@@ -269,19 +281,55 @@
 
 }
 
+
+
 @media(min-width:1200px) {
 	.drop-menu {
-		display: none;
-		display: block;
+		// display: none;
+		height: 0;
+		overflow: hidden;
+		transition: height .2s;
+	}
+
+
+
+	.open-drop-desktop svg {
+		.tr;
+		transform: rotate(180deg);
+		width: 14px;
+		height: 14px;
+		position: relative;
+		top: 3px;
+		right: -3px;
 	}
 
 	.drop-item:hover {
 		.drop-menu {
-			display: block;
+			// display: block;
+			// -webkit-animation-name: showSlow;
+			// animation-name: showSlow;
+			// -webkit-animation-duration: .4s;
+			// animation-duration: .4s;
+			height: 180px;
 		}
+
+		.open-drop-desktop svg {
+			transform: rotate(0);
+		}
+	}
+
+	.open-drop {
+		display: none;
 	}
 }
 
+.open-drop-desktop {
+	display: inline-block;
+
+	@media(max-width:1199px) {
+		display: none;
+	}
+}
 
 @media(max-width:1199px) {
 	.menu--folded {
