@@ -105,6 +105,9 @@
 .header-menu li.active {
 	color: @ac1;
 
+	.open-drop-desktop svg path {
+		fill: @ac1;
+	}
 
 	@media(max-width:1199px) {
 		color: @yellow;
@@ -118,13 +121,8 @@
 		padding-top: 75px;
 	}
 
-	.header-menu li:first-child {
-		position: absolute;
-		top: 20px;
-		left: 20px;
-	}
 
-	.header-menu li:not(:first-child) {
+	.header-menu li {
 
 		transform: translateX(500px);
 	}
@@ -148,12 +146,14 @@
 	line-height: 1;
 	font-family: @rr;
 	text-align: center;
+	cursor: pointer;
 }
 
 .open-list {
 	display: none;
 
 	@media(max-width:1199px) {
+		cursor: pointer;
 		font-size: 30px;
 		position: absolute;
 		top: 0;
@@ -248,6 +248,7 @@
 		&>a.active {
 			color: @ac1;
 		}
+
 	}
 
 	.acordion-list-items {
@@ -301,6 +302,11 @@
 		position: relative;
 		top: 3px;
 		right: -3px;
+
+		path {
+			fill: @pr2;
+		}
+
 	}
 
 	.drop-item:hover {
@@ -315,6 +321,7 @@
 
 		.open-drop-desktop svg {
 			transform: rotate(0);
+
 		}
 	}
 

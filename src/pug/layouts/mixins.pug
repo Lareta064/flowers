@@ -22,13 +22,12 @@ mixin header(menuItems, avatarSrc)
 								span flowers
 							
 							ul.header-menu
-								li
 								each item in menuItems
 									if item.addClass
 										li(class=" "+ item.addClass  )
 											a(href=" "+ item.hrefLink) #{item.text}
 									else if item.text == 'Каталог'
-										li.active.drop-item.menu--contains-foldable
+										li.drop-item.menu--contains-foldable
 											.drop-item-title
 												a(href=" "+ item.hrefLink) #{item.text}
 												span.open-drop-desktop
@@ -65,8 +64,6 @@ mixin header(menuItems, avatarSrc)
 													.acordion-list.menu--contains-foldable
 														.acordion-list-title
 															a(href=" "+ item.hrefLink) Корзины цветов
-															
-
 									else
 										li
 											a(href=" "+ item.hrefLink) #{item.text}
