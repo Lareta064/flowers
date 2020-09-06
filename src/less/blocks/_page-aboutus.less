@@ -101,10 +101,6 @@
 	margin-bottom: 30px;
 }
 
-// .section-info .border-block {
-// 	// border: 1px dashed #1F1F1F;
-// 	// padding: 10px;
-// }
 
 .section-info .page-button {
 	margin-top: 40px;
@@ -129,9 +125,24 @@
 	overflow: hidden;
 	position: relative;
 
+	img {
+		border-radius: 10px;
+	}
+
 	.absolute-block {
 		position: absolute;
 		top: 10px;
 		left: 10px;
+	}
+}
+
+.text-16 p a {
+	white-space: nowrap;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: @pr;
+
+	&:hover {
+		color: @ac1;
 	}
 }

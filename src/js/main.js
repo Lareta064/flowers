@@ -464,6 +464,20 @@ $(document).ready(function () {
 		tabIconText.text("Развернуть");
 	});
 
+	// разворачивать иконку стрелку в аккордеоне -Отвечаем на вопросы 
+	//аккордеон развернуть стрелку
+	const faqAcordion = document.querySelector('#answer');
+	if (faqAcordion) {
+		$('.collapsable').on('show.bs.collapse', function () {
+			let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+			tabIcon.addClass("rotate");
+		});
+		$('.collapsable').on('hide.bs.collapse', function () {
+			let tabIcon = $("#" + $(this).attr("aria-labelledby")).find(".arrow");
+			tabIcon.removeClass("rotate");
+		});
+	}
+
 	/*----ВСПЛЫВАЮЩАЯ ПОДСКАЗКА TOOLTIP СТРАНИЦА ОФОРМЛЕНИЯ ЗАКАЗА----*/
 	const tooltip = document.querySelector('.tooltip-div');
 	const tooltipShowIcon = document.querySelector('.tooltip-icon');

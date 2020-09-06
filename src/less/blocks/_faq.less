@@ -1,0 +1,84 @@
+.faq {
+	.title-2 {
+		font-family: @rb;
+		margin-bottom: 40px;
+	}
+}
+
+#answers {
+	button {
+		white-space: pre-wrap;
+	}
+
+	.card {
+		border-radius: 0;
+		border: 0;
+		border-bottom: 1px solid #EDEDED;
+	}
+
+	.card:first-child {
+		border-top: 1px solid #EDEDED;
+	}
+
+	.card-header {
+		min-height: 80px;
+		padding: 0;
+		border-radius: 0;
+		background-color: #fff;
+		border: 0px;
+		position: relative;
+		padding-left: 0;
+
+		.arrow {
+			position: absolute;
+			right: 20px;
+			top: 35px;
+
+			@media(max-width:767px) {
+				right: 10px;
+			}
+		}
+	}
+
+	.btn-link {
+		font-size: 18px;
+		line-height: 1.39;
+		font-family: @rb;
+
+		color: @pr;
+		width: 100%;
+		text-align: left;
+		padding-top: 25px;
+		padding-bottom: 10px;
+		outline: none !important;
+		padding-right: 40px;
+		text-decoration: none !important;
+
+
+	}
+
+	.arrow {
+		.tr;
+	}
+
+	.arrow.rotate {
+		transform: rotate(180deg);
+
+		svg path {
+			fill: @ac1;
+		}
+	}
+
+	.card-body {
+		padding-left: 0;
+		padding-bottom: 30px;
+		padding-right: 40px;
+		font-size: 16px;
+		line-height: 26px;
+		color: @pr;
+
+		@media(max-width:767px) {
+			padding-right: 40px;
+		}
+	}
+}
