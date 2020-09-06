@@ -90,7 +90,15 @@ mixin header(menuItems, avatarSrc)
 							.menu-toggle
 								span
 		
-
+mixin blogCard(img, title, text)
+	a(href="one-blog.html").blog-card
+		.blog-card__img.border-card
+			img(src="img/blog/blog"+img+".jpg", srcset="img/blog/blog"+img+".jpg 2x"  width="370" alt="img")
+		.blog-card__body
+			p.text-10 19.08.2020
+			h3 !{title}
+			p.text-14  !{text}
+			span.upper-link смотреть 
 mixin search
 	span
 		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

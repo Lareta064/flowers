@@ -1,0 +1,12 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	+header([{hrefLink: 'index.html', text: 'Главная'}, {hrefLink: 'aboutus.html', text: 'О нас'}, {hrefLink: 'categories.html', text: 'Каталог'},  {hrefLink: 'contacts.html', text: 'Акции'}, {hrefLink: 'blog.html', text: 'Блог', addClass: 'active' },  {hrefLink: 'contacts.html', text: 'Контакты'}], 'avatar')
+	.layout-hidden
+	.content-wrapper
+		include ../sections/_blog.pug
+		include ../sections/_footer.pug
+	
+block variables
+	-var title = "Блог";
