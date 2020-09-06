@@ -16,9 +16,16 @@
 	padding-top: 15px;
 	padding-bottom: 15px;
 	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
 
 	@media(max-width:1199px) {
-		padding-top: 15px;
+		padding-top: 0px;
+		padding-bottom: 0;
+		box-shadow: 0 3px rgba(0, 0, 0, 0.05);
 	}
 }
 
@@ -30,6 +37,10 @@
 	height: 1px;
 	top: 55px;
 	background-color: #EBECED;
+
+	@media(max-width: 1199px) {
+		top: 60px;
+	}
 }
 
 .header-top.fixed {
@@ -106,6 +117,10 @@
 	line-height: 17px;
 	color: @pr;
 	margin-right: auto;
+
+	@media(max-width:767px) {
+		display: none;
+	}
 }
 
 .logo {
@@ -121,10 +136,15 @@
 		padding-left: 5px;
 	}
 
-	@media(max-width:767px) {
-
-		display: none;
+	@media(max-width:1199px) {
+		position: relative;
+		z-index: 15;
 	}
+
+	@media(max-width:991px) {
+		font-size: 22px;
+	}
+
 
 }
 
@@ -158,39 +178,6 @@
 
 }
 
-.header-menu .header-menu__contacts {
-	display: none;
-	flex-direction: column;
-	margin-right: auto;
-	margin-left: auto;
-	padding-top: 20px;
-
-	.contact-phone {
-		// padding-right: 5px;
-	}
-
-	.contact-phone a {
-		color: #fff;
-		font-size: 18px;
-
-		&:hover {
-			color: @green;
-		}
-	}
-
-
-}
-
-// .header-menu__contacts .social-icons {
-// 	display: none;
-
-// 	@media(max-width:1199px) {
-// 		display: flex;
-// 		margin-top: 10px;
-// 		margin-left: auto;
-// 		margin-right: auto;
-// 	}
-// }
 
 .header-nav__row:first-child {
 	margin-bottom: 21px;
@@ -212,8 +199,6 @@
 		margin-bottom: 0;
 	}
 }
-
-
 
 .user-avatar {
 	width: 25px;
@@ -273,6 +258,15 @@
 
 .user-panel {
 
+	.user-favor,
+	.user-basket {
+		margin-left: 27px;
+
+		@media(max-width:1199px) {
+			margin-left: 15px;
+		}
+	}
+
 	.user-favor a,
 	.user-basket a {
 		min-width: 35px;
@@ -286,7 +280,7 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		margin-left: 27px;
+
 	}
 
 	.user-favor i {
@@ -314,17 +308,21 @@
 
 
 	@media(max-width:767px) {
-		display: none;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		z-index: 5;
+		background-color: @ac4;
+		box-shadow: 0 -3px rgba(0, 0, 0, .05);
+		// overflow: hidden;
+		text-align: center;
 	}
 }
 
-.header-nav__row .header-menu__contacts .contact-phone {
-	display: none;
 
-	@media(max-width:1199px) {
-		display: flex;
-	}
-}
 
 .contact-phone a {
 	font-size: 18px;
@@ -364,6 +362,7 @@
 
 	@media(max-width:1199px) {
 		padding-bottom: 0;
+		margin-left: 25px;
 	}
 
 	a {

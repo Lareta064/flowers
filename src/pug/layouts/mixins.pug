@@ -22,15 +22,13 @@ mixin header(menuItems, avatarSrc)
 								span flowers
 							
 							ul.header-menu
-								li.logo
-									span.red-text M
-									span flowers
+								li
 								each item in menuItems
 									if item.addClass
 										li(class=" "+ item.addClass  )
 											a(href=" "+ item.hrefLink) #{item.text}
 									else if item.text == 'Каталог'
-										li.drop-item.menu--contains-foldable
+										li.active.drop-item.menu--contains-foldable
 											.drop-item-title
 												a(href=" "+ item.hrefLink) #{item.text}
 												span.open-drop.menu--action-fold +
@@ -38,10 +36,10 @@ mixin header(menuItems, avatarSrc)
 												.drop-menu-wrapper
 													.acordion-list.menu--contains-foldable
 														.acordion-list-title
-															a(href=" "+ item.hrefLink) Классические
+															a.active(href=" "+ item.hrefLink) Классические
 															span.open-list.menu--action-fold +
 														.acordion-list-items.menu--foldable.menu--folded
-															a(href="#!") Розы
+															a(href="#!").active Розы
 															a(href="#!") Пионы
 															a(href="#!") Тюльпаны
 															a(href="#!") Геоцинты
@@ -71,14 +69,7 @@ mixin header(menuItems, avatarSrc)
 										li
 											a(href=" "+ item.hrefLink) #{item.text}
 									
-								.header-menu__contacts
-									.contact-phone
-										a(href="tel:+79055555555")
-											span(itemprop="telephone")  +7 905 555-55-55
-									+social-icons
-
-								.menu-social
-									+social-icons
+								
 							.user-panel
 								if avatarSrc
 									.user-avatar
@@ -99,19 +90,7 @@ mixin header(menuItems, avatarSrc)
 										span.item-value 2
 							.menu-toggle
 								span
-		.cat-panel#catPanel
-			.container
-				.category-menu
-					nav
-						a(href="#") Овощи
-						a(href="#") Фрукты
-						a(href="#") Экзотические фрукты
-						a(href="#") Мясо, рыба, птица
-						a(href="#") Вода, напитки, соки
-						a(href="#") Орехи и сухофрукты
-						a(href="#") Зелень
-						a(href="#") Ягоды
-						a(href="#") Товары по акции
+		
 
 mixin search
 	span

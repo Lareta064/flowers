@@ -13,7 +13,7 @@
 		left: 0;
 		width: 82%;
 		max-width: 400px;
-		background-color: #2c2c2c;
+		background-color: @ac4;
 		z-index: 10;
 		height: 100vh;
 		-webkit-box-orient: vertical;
@@ -78,6 +78,10 @@
 		margin-right: 0;
 	}
 
+	@media(max-width:1199px) {
+		width: 100%;
+	}
+
 
 }
 
@@ -89,6 +93,11 @@
 	display: inline-block;
 	padding-top: 10px;
 	padding-bottom: 20px;
+
+	@media(max-width:1199px) {
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
 }
 
 
@@ -106,10 +115,17 @@
 @media (max-width: 1199px) {
 	.header-menu {
 		overflow: hidden;
+		padding-top: 75px;
+	}
+
+	.header-menu li:first-child {
+		position: absolute;
+		top: 20px;
+		left: 20px;
 	}
 
 	.header-menu li:not(:first-child) {
-		color: #fff;
+
 		transform: translateX(500px);
 	}
 
@@ -120,12 +136,28 @@
 	}
 }
 
-.open-list,
+
 .open-drop {
 	font-size: 30px;
 	position: relative;
 	top: 5px;
 	right: -10px;
+}
+
+.open-list {
+	display: none;
+
+	@media(max-width:1199px) {
+		font-size: 30px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		width: 25px;
+		height: 25px;
+		line-height: 1;
+		font-family: @rr;
+	}
 }
 
 // drop-menu
@@ -174,6 +206,11 @@
 			display: block;
 			padding-top: 5px;
 			padding-bottom: 5px;
+			color: @pr2;
+
+			&.active {
+				color: @ac1;
+			}
 		}
 
 		&.active {
@@ -187,6 +224,20 @@
 		font-family: @rb;
 		color: @ac1;
 		margin-bottom: 10px;
+		position: relative;
+
+		@media(max-width:1199px) {
+			margin-bottom: 0;
+		}
+
+		&>a {
+			color: @pr2;
+
+		}
+
+		&>a.active {
+			color: @ac1;
+		}
 	}
 
 	.acordion-list-items {
@@ -194,13 +245,25 @@
 			font-size: 14px;
 			line-height: 24px;
 
+			@media(max-width:1199px) {
+				line-height: 18px;
+			}
+
 			&+a {
 				margin-top: 5px;
+
+				@media(max-width:1199px) {
+					margin-top: 0;
+				}
 			}
 
 			&.active {
 				color: @ac1;
 			}
+		}
+
+		@media(max-width:1199px) {
+			padding-left: 20px;
 		}
 	}
 
@@ -208,13 +271,13 @@
 
 @media(min-width:1200px) {
 	.drop-menu {
-		height: 0;
-		width: 605px;
+		display: none;
+		display: block;
 	}
 
 	.drop-item:hover {
 		.drop-menu {
-			height: 180px;
+			display: block;
 		}
 	}
 }
@@ -229,9 +292,9 @@
 		position: relative;
 		transform: translate(0%, 0%);
 
-		&.active {
-			height: auto;
-		}
+		// &.active {
+		// 	height: auto;
+		// }
 
 
 		.drop-menu-wrapper {

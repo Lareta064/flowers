@@ -3,6 +3,7 @@ extends ../layouts/layout.pug
 block content
 
 	+header([{hrefLink: 'index.html', text: 'Главная', addClass:'active'}, {hrefLink: 'aboutus.html', text: 'О нас'}, {hrefLink: 'catalog.html', text: 'Каталог'},  {hrefLink: 'contacts.html', text: 'Акции'}, {hrefLink: 'blog.html', text: 'Блог' },  {hrefLink: 'contacts.html', text: 'Контакты'}], 'avatar')
+	.layout-hidden
 	include ../sections/_main-slider.pug
 	include ../sections/_category-block.pug
 	include ../sections/_main-section-menu.pug
